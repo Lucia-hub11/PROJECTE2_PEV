@@ -1,8 +1,8 @@
 {
-    "name": "MyActions",
+    "name": "MyInputs",
     "maps": [
         {
-            "name": "Action",
+            "name": "Actions",
             "id": "501ea735-3edb-49c4-a1cc-71316cb0b7a8",
             "actions": [
                 {
