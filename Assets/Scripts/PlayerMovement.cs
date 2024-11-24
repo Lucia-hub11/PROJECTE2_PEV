@@ -41,9 +41,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        // Calcular la direcci?n de entrada (incluye movimiento lateral y hacia adelante/atr?s)
-        var localInput = transform.right * _inputs.Move.x + transform.forward * _inputs.Move.y;
-        Vector3 direction = new Vector3(localInput.x, 0, localInput.z);
+        // Calcular la dirección de entrada (incluye movimiento lateral y hacia adelante/atrás)
+        var localInput = new Vector3(_inputs.Move.x, 0, _inputs.Move.y); // Entrada de movimiento en el espacio local
+        Vector3 direction = localInput.normalized; // Normalizar para obtener la dirección sin magnitud extra
 
         Vector3 velocity = new Vector3();
 
@@ -64,9 +64,18 @@ public class PlayerMovement : MonoBehaviour
         // Mover al personaje usando el CharacterController
         _characterController.Move(velocity * Time.deltaTime);
 
-        // Guardar la ?ltima velocidad para la f?sica
+        // Ajustar la dirección del personaje para que mire hacia donde se mueve
+        if (direction.magnitude > 0.1f) // Evitar rotación si no hay input de movimiento
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+        }
+
+        // Guardar la última velocidad para la física
         _lastVelocity = velocity;
     }
+
+
 
     private float GetGravity()
     {
