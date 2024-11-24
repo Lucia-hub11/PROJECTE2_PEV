@@ -39,6 +39,6 @@ public class Shooter : MonoBehaviour
 
     private void SpawnBullet()
     {
-        Instantiate(Prefab, transform.position, Quaternion.identity);
+        Instantiate(Prefab, transform.position, transform.rotation);
     }
 }
