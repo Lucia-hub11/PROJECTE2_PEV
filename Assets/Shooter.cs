@@ -6,6 +6,7 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
     public GameObject Prefab;
+    public GameObject BulletSpawn;
     private Rigidbody _rg;
     public float bulletspeed;
     // Start is called before the first frame update
@@ -39,6 +40,6 @@ public class Shooter : MonoBehaviour
 
     private void SpawnBullet()
     {
-        Instantiate(Prefab, transform.position, transform.rotation);
+        Instantiate(Prefab, BulletSpawn.transform.position, BulletSpawn.transform.rotation);
     }
 }
