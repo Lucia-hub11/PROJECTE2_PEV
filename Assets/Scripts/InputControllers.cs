@@ -11,6 +11,9 @@ public class InputControllers : MonoBehaviour
     private bool _jump;
     public bool Jump => _jump;
 
+    private bool _shoot;
+    public bool Shoot => _shoot;
+
 
     private void OnMove(InputValue input)
     {
@@ -20,6 +23,11 @@ public class InputControllers : MonoBehaviour
     private void OnJump()
     {
         _jump = true;
+    }
+
+    private void OnShoot()
+    {
+        _shoot = true;
     }
 
     private void LateUpdate()

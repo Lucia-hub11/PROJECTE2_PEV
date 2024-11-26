@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
+    InputControllers _input;
+
     public GameObject Prefab;
     public GameObject BulletSpawn;
     private Rigidbody _rg;
@@ -12,6 +14,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _input = GetComponent<InputControllers>();
         _rg = GetComponent<Rigidbody>();
         Applyspeed();
         DestroyBullet();
@@ -29,13 +32,13 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
-            ShouldShoot();
+        if (ShouldShoot())
+            SpawnBullet();
     }
 
-    private void ShouldShoot()
+    private bool ShouldShoot()
     {
-        SpawnBullet();
+        return _input.Shoot;
     }
 
     private void SpawnBullet()
