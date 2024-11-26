@@ -71,6 +71,13 @@ public class PlayerMovement : MonoBehaviour
         // Mover al personaje usando el CharacterController
         _characterController.Move(velocity * Time.deltaTime);
 
+        // Ajustar la dirección del personaje para que mire hacia donde se mueve
+        if (direction.magnitude > 0.1f) // Evitar rotación si no hay input de movimiento
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+          //  transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+        }
+
         // Guardar la última velocidad para la física
         _lastVelocity = velocity;
     }
