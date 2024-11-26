@@ -10,11 +10,13 @@ public class CameraController : MonoBehaviour
     public float MaxVerticalAngle = 80f; // Límite superior de inclinación
     public float MinVerticalAngle = -80f; // Límite inferior de inclinación
 
-    private Vector2 _mouseDelta; // Delta del ratón
     private float _verticalRotation = 0f; // Rotación acumulativa vertical
+
+    InputControllers _inputs;
 
     private void Start()
     {
+        _inputs = GetComponentInParent<InputControllers>();
         // Bloquear y esconder el cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -25,22 +27,18 @@ public class CameraController : MonoBehaviour
         RotateCamera();
     }
 
-    public void OnLook(InputValue input)
-    {
-        _mouseDelta = input.Get<Vector2>();
-    }
-
     private void RotateCamera()
     {
-        // Calcular rotación horizontal (eje Y) y aplicarla al jugador
-        float horizontalRotation = _mouseDelta.x * Sensitivity * Time.deltaTime;
-        Player.Rotate(Vector3.up * horizontalRotation);
+        // Rotar horizontalmente al jugador con el mouse
+        float horizontalRotation = _inputs.Look.x * Sensitivity * Time.deltaTime;
+        Player.Rotate(Vector3.up * horizontalRotation); // La cámara no rota independiente del jugador
 
-        // Calcular rotación vertical (eje X) y limitarla
-        _verticalRotation -= _mouseDelta.y * Sensitivity * Time.deltaTime;
+        // Rotación vertical (solo afecta la cámara, no el jugador)
+        _verticalRotation -= _inputs.Look.y * Sensitivity * Time.deltaTime;
         _verticalRotation = Mathf.Clamp(_verticalRotation, MinVerticalAngle, MaxVerticalAngle);
 
         // Aplicar la rotación vertical a la cámara
         transform.localRotation = Quaternion.Euler(_verticalRotation, 0f, 0f);
     }
+
 }
