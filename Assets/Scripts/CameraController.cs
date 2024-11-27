@@ -1,11 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    public float Sensitivity = 100f; // Sensibilidad del ratón
-    public float MaxVerticalAngle = 80f; // Límite superior de inclinación
-    public float MinVerticalAngle = -80f; // Límite inferior de inclinación
+    public float Sensitivity = 30f; // Sensibilidad del ratón
+    public float MaxVerticalAngle = 15f; // Límite superior de inclinación
+    public float MinVerticalAngle = -30f; // Límite inferior de inclinación
 
     private float _verticalRotation = 0f; // Rotación acumulativa vertical
     public InputControllers _inputs;
@@ -34,4 +36,3 @@ public class CameraController : MonoBehaviour
         transform.parent.Rotate(Vector3.up * _inputs.Look.x * Sensitivity * Time.deltaTime);
     }
 }
-

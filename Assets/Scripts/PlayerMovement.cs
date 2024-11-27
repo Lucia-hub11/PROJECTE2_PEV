@@ -83,8 +83,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
-
     private float GetGravity()
     {
         return _lastVelocity.y + Physics.gravity.y * Time.deltaTime;
