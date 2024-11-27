@@ -3716,8 +3716,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sensitivity: 30
-  MaxVerticalAngle: 15
-  MinVerticalAngle: -30
+  MaxVerticalAngle: 40
+  MinVerticalAngle: -20
   _inputs: {fileID: 1991449871}
 --- !u!1 &989135018
 GameObject:

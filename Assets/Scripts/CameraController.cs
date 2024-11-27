@@ -6,16 +6,21 @@ using UnityEngine.InputSystem;
 public class CameraController : MonoBehaviour
 {
     public float Sensitivity = 30f; // Sensibilidad del ratón
-    public float MaxVerticalAngle = 15f; // Límite superior de inclinación
-    public float MinVerticalAngle = -30f; // Límite inferior de inclinación
+    public float MaxVerticalAngle = 40f; // Límite superior de inclinación
+    public float MinVerticalAngle = -20f; // Límite inferior de inclinación
 
     private float _verticalRotation = 0f; // Rotación acumulativa vertical
-    public InputControllers _inputs;
+    public InputControllers _inputs; // Entrada personalizada
+
+    private Transform _cameraHolder; // Referencia al objeto padre de la cámara
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Asignar el objeto padre (holder) que rotará la cámara
+        _cameraHolder = transform.parent;
     }
 
     private void Update()
@@ -25,14 +30,14 @@ public class CameraController : MonoBehaviour
 
     private void RotateCamera()
     {
-        if (_inputs == null) return; // Asegurar que _inputs no sea nulo
+        if (_inputs == null || _cameraHolder == null) return;
 
-        // Rotación vertical (solo afecta la cámara)
+        // Rotación vertical (aplicada al holder para girar la cámara alrededor del jugador)
         _verticalRotation -= _inputs.Look.y * Sensitivity * Time.deltaTime;
         _verticalRotation = Mathf.Clamp(_verticalRotation, MinVerticalAngle, MaxVerticalAngle);
-        transform.localRotation = Quaternion.Euler(_verticalRotation, 0f, 0f);
+        _cameraHolder.localRotation = Quaternion.Euler(_verticalRotation, _cameraHolder.localRotation.eulerAngles.y, 0f);
 
-        // La rotación horizontal puede afectar directamente al holder (sin mover al jugador)
-        transform.parent.Rotate(Vector3.up * _inputs.Look.x * Sensitivity * Time.deltaTime);
+        // Rotación horizontal (gira el holder en el eje Y)
+        _cameraHolder.Rotate(Vector3.up * _inputs.Look.x * Sensitivity * Time.deltaTime, Space.World);
     }
 }
