@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         if (direction.magnitude > 0.1f) // Evitar rotación si no hay input de movimiento
         {
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-          //  transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
 
         // Guardar la última velocidad para la física
