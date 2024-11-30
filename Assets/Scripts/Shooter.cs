@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Shooter : MonoBehaviour
 {
-    InputControllers _input;
+    InputControllers _inputs;
 
     public GameObject Prefab;
     public GameObject BulletSpawn;
@@ -15,7 +15,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _input = GetComponent<InputControllers>();
+        _inputs = GetComponent<InputControllers>();
         _rg = GetComponent<Rigidbody>();
         Applyspeed();
         DestroyBullet();
@@ -39,7 +39,7 @@ public class Shooter : MonoBehaviour
 
     private bool ShouldShoot()
     {
-        return _input.Shoot;
+        return _inputs.Shoot;
     }
 
     private void SpawnBullet()

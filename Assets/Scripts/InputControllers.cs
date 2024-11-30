@@ -33,6 +33,7 @@ public class InputControllers : MonoBehaviour
     private void LateUpdate()
     {
         _jump = false;
+        _shoot = false;
     }
 
     private Vector2 _look;
