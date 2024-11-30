@@ -9460,6 +9460,9 @@ MonoBehaviour:
   Prefab: {fileID: 5500571486025440369, guid: eef6b014750ad5142830baf49e1d974d, type: 3}
   BulletSpawn: {fileID: 1175355461}
   bulletspeed: 20
+  apuntaColliderLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &1193661159
 GameObject:
   m_ObjectHideFlags: 0

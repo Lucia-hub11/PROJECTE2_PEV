@@ -12,6 +12,9 @@ public class Shooter : MonoBehaviour
     public GameObject BulletSpawn;
     private Rigidbody _rg;
     public float bulletspeed;
+
+    public LayerMask apuntaColliderLayerMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,13 @@ public class Shooter : MonoBehaviour
     {
         if (ShouldShoot())
             SpawnBullet();
+
+        Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
+        Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, apuntaColliderLayerMask))
+        {
+            transform.position = raycastHit.point;
+        }
     }
 
     private bool ShouldShoot()
