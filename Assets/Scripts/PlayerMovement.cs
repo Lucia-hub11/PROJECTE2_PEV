@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     InputControllers _inputs;
     GroundChecker _groundChecker;
 
+    public Transform _camera;
+
     public float WalkSpeed = 5;
     public float JumpSpeed = 5;
     public float AirControl = 0.1f;
@@ -41,21 +43,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        // Calcular la dirección de entrada (incluye movimiento lateral y hacia adelante/atrás)
-        var localInput = new Vector3(_inputs.Move.x, 0, _inputs.Move.y); // Entrada de movimiento en el espacio local
-        Vector3 direction = localInput.normalized; // Normalizar para obtener la dirección sin magnitud extra
+        // Obtener la dirección de movimiento en función de la cámara
+        Vector3 camForward = _camera.forward;
+        camForward.y = 0; // Ignorar inclinación vertical
+        camForward.Normalize();
 
-        Vector3 velocity = new Vector3();
+        Vector3 camRight = _camera.right;
+        camRight.y = 0; // Ignorar inclinación vertical
+        camRight.Normalize();
 
-        // Control en el aire o en tierra
-        float smoothFactor = _groundChecker.Grounded ? 1 : AirControl * Time.deltaTime;
+        // Calcular la dirección del movimiento basado en la entrada del jugador
+        Vector3 direction = camForward * _inputs.Move.y + camRight * _inputs.Move.x;
 
-        // Aplicar velocidad horizontal (sin giro)
-        velocity.x = Mathf.Lerp(_lastVelocity.x, direction.x * WalkSpeed, smoothFactor);
-        velocity.z = Mathf.Lerp(_lastVelocity.z, direction.z * WalkSpeed, smoothFactor);
+        // Normalizar la dirección si hay input significativo
+        direction = direction.magnitude > 0.1f ? direction.normalized : Vector3.zero;
+
+        // Calcular la velocidad
+        Vector3 velocity = direction * WalkSpeed;
 
         // Aplicar gravedad
-        velocity.y = GetGravity();
+        velocity.y = _lastVelocity.y + Physics.gravity.y * Time.deltaTime;
 
         // Aplicar salto si corresponde
         if (ShouldJump())
@@ -74,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
         // Guardar la última velocidad para la física
         _lastVelocity = velocity;
     }
-
 
 
     private float GetGravity()

@@ -34,4 +34,12 @@ public class InputControllers : MonoBehaviour
     {
         _jump = false;
     }
+
+    private Vector2 _look;
+    public Vector2 Look => _look;
+
+    private void OnLook(InputValue input)
+    {
+        _look = input.Get<Vector2>();
+    }
 }
