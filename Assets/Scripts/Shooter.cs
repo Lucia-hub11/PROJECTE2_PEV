@@ -9,6 +9,7 @@ public class Shooter : MonoBehaviour
     InputControllers _inputs;
 
     public GameObject Prefab;
+    public GameObject Spark;
     public GameObject BulletSpawn;
     private Rigidbody _rg;
     public float bulletspeed;
@@ -24,7 +25,9 @@ public class Shooter : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        GameObject SparkSystem = Instantiate(Spark, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        Destroy(SparkSystem, 0.25f);
     }
 
     private void Applyspeed()

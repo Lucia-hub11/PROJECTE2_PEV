@@ -11455,6 +11455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 5500571486025440369, guid: eef6b014750ad5142830baf49e1d974d, type: 3}
+  Spark: {fileID: 0}
   BulletSpawn: {fileID: 1790011957}
   bulletspeed: 20
   apuntaColliderLayerMask:
