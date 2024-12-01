@@ -157,6 +157,9 @@ MonoBehaviour:
   Prefab: {fileID: 0}
   BulletSpawn: {fileID: 0}
   bulletspeed: 20
+  apuntaColliderLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &6298833605319495554
 Rigidbody:
   m_ObjectHideFlags: 0
