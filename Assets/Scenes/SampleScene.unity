@@ -11460,7 +11460,7 @@ MonoBehaviour:
   bulletspeed: 20
   apuntaColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
 --- !u!1 &1810417364
 GameObject:
   m_ObjectHideFlags: 0
