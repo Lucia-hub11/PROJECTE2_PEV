@@ -21,11 +21,10 @@ public class Shooter : MonoBehaviour
         _inputs = GetComponent<InputControllers>();
         _rg = GetComponent<Rigidbody>();
         Applyspeed();
-        DestroyBullet();
     }
-    private void DestroyBullet()
+    private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject, 1);
+        Destroy(gameObject);
     }
 
     private void Applyspeed()
