@@ -5,23 +5,30 @@ using UnityEngine;
 public class ChaseBehaviour : StateMachineBehaviour
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    //find player
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        //find player
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    ////override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    ////{
-    ////    //check if player far
-    ////    //move towards player
-    ////}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        Vector3 direction = new Vector3(10, 0, 10);
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    //res
-    //}
+        Vector3 velocity = direction * Speed;
+        
+        Vector3 target = transform.position + direction;
+        transform.LookAt(target);
+        //check if player far
+        //move towards player
+    }
+
+// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        //res
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
