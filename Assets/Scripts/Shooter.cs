@@ -9,10 +9,8 @@ public class Shooter : MonoBehaviour
     InputControllers _inputs;
 
     public GameObject Prefab;
-    public GameObject Spark;
+
     public GameObject BulletSpawn;
-    private Rigidbody _rg;
-    public float bulletspeed;
 
     public LayerMask apuntaColliderLayerMask;
 
@@ -20,33 +18,22 @@ public class Shooter : MonoBehaviour
     void Start()
     {
         _inputs = GetComponent<InputControllers>();
-        _rg = GetComponent<Rigidbody>();
-        Applyspeed();
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        GameObject SparkSystem = Instantiate(Spark, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-        Destroy(SparkSystem, 0.25f);
     }
 
-    private void Applyspeed()
-    {
-        _rg.velocity = transform.forward * bulletspeed;
-    }
+
 
     // Update is called once per frame
     void Update()
     {
-        if (ShouldShoot())
-            SpawnBullet();
-
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, apuntaColliderLayerMask))
         {
-            transform.position = raycastHit.point;
+            BulletSpawn.transform.LookAt(raycastHit.point);
         }
+
+        if (ShouldShoot())
+            SpawnBullet();
     }
 
     private bool ShouldShoot()

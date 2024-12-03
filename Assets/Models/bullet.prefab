@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2544244805227131220}
   - component: {fileID: 6298833605319495554}
   - component: {fileID: 4604563748809847085}
-  - component: {fileID: 9177286241644659870}
+  - component: {fileID: -575411768852615102}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -190,7 +190,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9177286241644659870
+--- !u!114 &-575411768852615102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,13 +199,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5500571486025440369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b2b4259be459c4790e3bbc3fc3efc3, type: 3}
+  m_Script: {fileID: 11500000, guid: 59100db950c942540be552ffbd41ed1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 0}
-  Spark: {fileID: 4714831140474033150, guid: 039cb56ee81526241b67b89531470f9d, type: 3}
-  BulletSpawn: {fileID: 0}
   bulletspeed: 20
-  apuntaColliderLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  Spark: {fileID: 4714831140474033150, guid: 039cb56ee81526241b67b89531470f9d, type: 3}
