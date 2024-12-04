@@ -20,6 +20,10 @@ public class ChaseBehaviour : StateMachineBehaviour
         
         Vector3 target = transform.position + direction;
         transform.LookAt(target);
+        if (IsDetected())
+        {
+            transform.LookAt(WayPoint);
+        }
         //check if player far
         //move towards player
     }

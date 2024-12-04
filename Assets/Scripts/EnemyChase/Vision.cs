@@ -8,14 +8,11 @@ public class Vision : MonoBehaviour
     public float Range = 10;
     
 
-    public Transform Player;
-
-    public Transform[] WayPoint; //fa falta array si nomes fa falta 1 wp?
-
-    private int WP_Index;
-
-    Transform WP => WayPoint[WP_Index]; //fa falta? es que com que nomes és 1
     
+
+    public Transform WayPoint; //fa falta array si nomes fa falta 1 wp?
+
+       
 
     private void OnDrawGizmos()
     {
@@ -32,11 +29,13 @@ public class Vision : MonoBehaviour
     void Update()
     {
         Debug.Log(IsDetected());
+
+        
     }
 
-    bool IsDetected()
+    public bool IsDetected()
     {
-        if (!IsInRange(Player))
+        if (!IsInRange(WayPoint))
             return false;
         
 
@@ -47,6 +46,6 @@ public class Vision : MonoBehaviour
     private bool IsInRange(Transform target)//que es el target?
     {
         return Vector3.Distance(transform.position, target.position) < Range;
-        transform.LookAt(WP);
+        
     }
 }

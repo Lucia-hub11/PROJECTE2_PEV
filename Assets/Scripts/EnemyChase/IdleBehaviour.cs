@@ -27,7 +27,7 @@ public class IdleBehaviour : StateMachineBehaviour
 
     private bool IsPlayerDetected(Transform transform)
     {
-        transform.GetComponent<Vision>(); //AQUI POSAR EL SCRIPT DE SI DETECA QUE ESTA ALLA AMB FIELD OF VIEW I RANGE IT AL
+       return transform.GetComponent<Vision>().IsDetected(); //AQUI POSAR EL SCRIPT DE SI DETECA QUE ESTA ALLA AMB FIELD OF VIEW I RANGE IT AL
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
