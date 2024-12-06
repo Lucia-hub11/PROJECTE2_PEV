@@ -11,8 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform _camera;
 
-    public Animator key_doorAnimator;
-    public bool key_collected;
+    public Animator keyDoorAnimator;
+    bool key_collected;
 
 
     public float WalkSpeed = 5;
@@ -99,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "KeyDoorCollider")
         {
             key_collected = true;
-            key_doorAnimator.SetBool("Key Collected", key_collected);
+            keyDoorAnimator.SetBool("Key Collected", key_collected);
         }
     }
 }
