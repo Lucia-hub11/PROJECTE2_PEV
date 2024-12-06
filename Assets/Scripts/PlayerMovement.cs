@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform _camera;
 
+    public Animator keyDoorAnimator;
+    bool key_collected;
+
+
     public float WalkSpeed = 5;
     public float JumpSpeed = 5;
     public float AirControl = 0.1f;
@@ -23,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
         _inputs = GetComponent<InputControllers>();
         _groundChecker = GetComponentInChildren<GroundChecker>();
+
+        key_collected = false;
     }
 
     // Update is called once per frame
@@ -82,9 +88,18 @@ public class PlayerMovement : MonoBehaviour
         _lastVelocity = velocity;
     }
 
-
     private float GetGravity()
     {
         return _lastVelocity.y + Physics.gravity.y * Time.deltaTime;
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "KeyDoorCollider")
+        {
+            key_collected = true;
+            keyDoorAnimator.SetBool("Key Collected", key_collected);
+        }
     }
 }
