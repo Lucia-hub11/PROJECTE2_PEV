@@ -29,7 +29,11 @@ public class Shooter : MonoBehaviour
     {
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
-        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, DefaultColliderLayerMask) || Physics.Raycast(ray, out RaycastHit raycastHit, 999f, GroundColliderLayerMask))
+        if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, DefaultColliderLayerMask))
+        {
+            BulletSpawn.transform.LookAt(raycastHit.point);
+        }
+        else if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, GroundColliderLayerMask))
         {
             BulletSpawn.transform.LookAt(raycastHit.point);
         }
