@@ -329,10 +329,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -542.2250366210938,
-            "y": 242.0175018310547,
-            "width": 0.0,
-            "height": 0.0
+            "x": -482.0,
+            "y": 293.0,
+            "width": 105.0,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -389,35 +389,10 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.ColorRGBAMaterialSlot",
-    "m_ObjectId": "7b415b1f9fbf466e852d132f1e6f2a78",
-    "m_Id": 2,
-    "m_DisplayName": "Output",
-    "m_SlotType": 1,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Output",
-    "m_StageCapability": 2,
-    "m_Value": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 1.0
-    },
-    "m_DefaultValue": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0,
-        "w": 0.0
-    },
-    "m_Labels": []
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "88646b28bcc1482ab23f65373821f4fa",
     "m_Id": 0,
-    "m_DisplayName": "Color",
+    "m_DisplayName": "ScreenColor",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -445,6 +420,31 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ColorRGBAMaterialSlot",
+    "m_ObjectId": "afd2ec6413574d2f8dfd21ce628fb16b",
+    "m_Id": 2,
+    "m_DisplayName": "Output",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Output",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.Rendering.Universal.UniversalSampleBufferNode",
     "m_ObjectId": "c76be93e856348949eb87e5c03a30909",
     "m_Group": {
@@ -455,9 +455,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -607.0000610351563,
-            "y": -120.0,
-            "width": 208.00003051757813,
+            "x": -652.0,
+            "y": -100.99999237060547,
+            "width": 208.0,
             "height": 313.0
         }
     },
@@ -466,7 +466,7 @@
             "m_Id": "c7b8714e6c8b49fcaa7c7f686bc795f5"
         },
         {
-            "m_Id": "7b415b1f9fbf466e852d132f1e6f2a78"
+            "m_Id": "afd2ec6413574d2f8dfd21ce628fb16b"
         }
     ],
     "synonyms": [
@@ -587,10 +587,10 @@
     "m_Guid": {
         "m_GuidSerialized": "0440aba1-bef4-474b-aea2-b62b31d2ba46"
     },
-    "m_Name": "Color",
+    "m_Name": "ScreenColor",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Color",
-    "m_DefaultReferenceName": "_Color",
+    "m_RefNameGeneratedByDisplayName": "ScreenColor",
+    "m_DefaultReferenceName": "_ScreenColor",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -602,8 +602,8 @@
     "m_Hidden": false,
     "m_Value": {
         "r": 1.0,
-        "g": 0.04313725605607033,
-        "b": 0.0,
+        "g": 1.0,
+        "b": 1.0,
         "a": 0.0
     },
     "isMainColor": false,

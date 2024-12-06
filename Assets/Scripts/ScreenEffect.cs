@@ -4,5 +4,13 @@ using UnityEngine;
 
 public class ScreenEffect : MonoBehaviour
 {
-    public Material ScreenEffects;
+    public Material ScreenEffectMaterial;
+
+
+    public void ChangeColor(float r, float g, float b)
+    {
+        Color newColor = new Color(r, g, b);
+        ScreenEffectMaterial.SetColor("ScreenColor", newColor);
+    }
+
 }
