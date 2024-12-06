@@ -7,43 +7,36 @@ public class Vision : MonoBehaviour
 {
     public float Range = 10;
     
+    public Transform WayPoint; 
+
+    //private void OnDrawGizmos() //per veure el rang on es mes clarament
+    //{
+    //    Gizmos.DrawWireSphere(transform.position, Range);
+    //}
 
     
-
-    public Transform WayPoint; //fa falta array si nomes fa falta 1 wp?
-
-       
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, Range);
-    }
-
-    // Start is called before the first frame update
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Debug.Log(IsDetected());
-
-        
+                
     }
 
     public bool IsDetected()
     {
-        if (!IsInRange(WayPoint))
-            return false;
+        if (IsInRange(WayPoint))
+            return true;
         
-
-        return true;
+        return false;
     }
 
     
-    private bool IsInRange(Transform target)//que es el target?
+    private bool IsInRange(Transform target)
     {
         return Vector3.Distance(transform.position, target.position) < Range;
         

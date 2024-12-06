@@ -4,47 +4,24 @@ using UnityEngine;
 
 public class IdleBehaviour : StateMachineBehaviour
 {
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+    
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
-        _timer = 0;
-        //reset Timer
-        //find Player
+        //_player = GameObject.FindGameObjectWithTag("Player").transform;
+        //_timer = 0;
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //check if Time passed
-        //check if Player is close
+        
         var playerClose = IsPlayerDetected(animator.transform);
-        var timeUp = IsTimeUp();
-
         animator.SetBool("isChasing", playerClose);
-        animator.SetBool("isAsleep", timeUp);
+        
     }
 
     private bool IsPlayerDetected(Transform transform)
     {
-       return transform.GetComponent<Vision>().IsDetected(); //AQUI POSAR EL SCRIPT DE SI DETECA QUE ESTA ALLA AMB FIELD OF VIEW I RANGE IT AL
+        return transform.GetComponent<Vision>().IsDetected(); 
     }
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    //? jo diria que no hi ha exit aqui
-    //}
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
