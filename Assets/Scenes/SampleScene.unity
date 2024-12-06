@@ -1977,7 +1977,7 @@ GameObject:
   - component: {fileID: 524776308}
   - component: {fileID: 524776307}
   - component: {fileID: 524776306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11525,9 +11525,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Prefab: {fileID: 5500571486025440369, guid: eef6b014750ad5142830baf49e1d974d, type: 3}
   BulletSpawn: {fileID: 1790011957}
-  apuntaColliderLayerMask:
+  DefaultColliderLayerMask:
     serializedVersion: 2
     m_Bits: 1
+  GroundColliderLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1810417364
 GameObject:
   m_ObjectHideFlags: 0
