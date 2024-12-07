@@ -8,23 +8,16 @@ public class BulletShooting : MonoBehaviour
     public float bulletspeed;
     public GameObject Spark;
 
-    private ScreenEffect screenEffect;
     // Start is called before the first frame update
     void Start()
     {
         _rg = GetComponent<Rigidbody>();
         Applyspeed();
-
-        screenEffect = FindObjectOfType<ScreenEffect>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         GameObject SparkSystem = Instantiate(Spark, transform.position, Quaternion.identity);
-        if (screenEffect != null)
-        {
-            screenEffect.OnObjectDestroyed();
-        }
         Destroy(gameObject);
         Destroy(SparkSystem, 0.25f);
     }
@@ -32,11 +25,6 @@ public class BulletShooting : MonoBehaviour
     private void Applyspeed()
     {
         _rg.velocity = transform.forward * bulletspeed;
-    }
-    void OnDestroy()
-    {
-        // Llama al método en ScreenEffect cuando el objeto es destruido
-        FindObjectOfType<ScreenEffect>().OnObjectDestroyed();
     }
 
     // Update is called once per frame
