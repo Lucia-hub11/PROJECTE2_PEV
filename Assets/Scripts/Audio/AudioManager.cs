@@ -49,15 +49,16 @@ public class AudioManager : MonoBehaviour
         //    {
         //        MusicaInfantil.Play();
         //    }
-            
+
         //}
+
 
         if (radioArea.IsRadioDetected())
         {
             if (!MusicaInfantil.isPlaying)
             {
                 if (ShouldPlay())
-                    Play();
+                    MusicPlay();
             }
         }
         else
@@ -69,14 +70,39 @@ public class AudioManager : MonoBehaviour
         }
 
 
+        //if (radioArea != null && radioArea.IsRadioDetected())
+        //{
+        //    if (!MusicaInfantil.isPlaying && ShouldPlay())
+        //    {
+        //        MusicPlay();  // Reproduce la música si debe hacerlo
+        //    }
+        //}
+        //else
+        //{
+        //    if (MusicaInfantil.isPlaying)
+        //    {
+        //        MusicaInfantil.Stop();  // Detén la música si el jugador sale del área
+        //    }
+        //}
+
+
     }
 
     private bool ShouldPlay()
     {
         return _inputs.Interact;
+
+        //if (_inputs.Interact)
+        //{
+        //    Debug.Log("Input Interact activado");
+        //    return true;
+        //}
+
+        //Debug.Log("Input Interact no activado");
+        //return false;
     }
 
-    private void Play()
+    private void MusicPlay()
     {
         MusicaInfantil.Play();
     }

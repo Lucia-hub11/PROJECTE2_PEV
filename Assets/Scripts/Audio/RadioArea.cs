@@ -40,7 +40,11 @@ public class RadioArea : MonoBehaviour
         {
             return true;
         }
-        return false;
+        else
+        {
+            return false;
+        }
+    
     }
     private bool IsInRadioRange(Transform target)
     {
