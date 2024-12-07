@@ -7,14 +7,14 @@ public class Vision : MonoBehaviour
 {
     public float Range = 10;
     
-    public Transform WayPoint; 
+    public Transform WayPoint;
 
     //private void OnDrawGizmos() //per veure el rang on es mes clarament
     //{
     //    Gizmos.DrawWireSphere(transform.position, Range);
     //}
 
-    
+
     void Start()
     {
 
