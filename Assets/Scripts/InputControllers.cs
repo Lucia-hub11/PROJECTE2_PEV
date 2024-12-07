@@ -41,6 +41,7 @@ public class InputControllers : MonoBehaviour
     {
         _jump = false;
         _shoot = false;
+        _interact = false;
     }
 
     private Vector2 _look;
