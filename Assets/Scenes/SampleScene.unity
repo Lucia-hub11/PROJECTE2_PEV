@@ -9984,7 +9984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10e929cdc9b711242b8be3a6537223fb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.63
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 10e929cdc9b711242b8be3a6537223fb, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12571,7 +12571,7 @@ MonoBehaviour:
   _camera: {fileID: 963194228}
   keyDoorAnimator: {fileID: 538161676}
   WalkSpeed: 5
-  JumpSpeed: 10
+  JumpSpeed: 5
   AirControl: 0.1
 --- !u!114 &1991449871
 MonoBehaviour:
