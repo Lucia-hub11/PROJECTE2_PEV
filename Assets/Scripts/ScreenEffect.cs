@@ -16,6 +16,11 @@ public class ScreenEffect : MonoBehaviour
         ScreenEffectMaterial.SetColor("ScreenColor", CurrentColor);
     }
 
+    void OnDisable()
+    {
+        ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
+    }
+
     void OnApplicationQuit()
     {
         ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
