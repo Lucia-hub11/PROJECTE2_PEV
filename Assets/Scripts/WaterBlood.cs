@@ -10,46 +10,51 @@ public class WaterBlood : MonoBehaviour
     public Color Red1 = new Color(1f, 0f, 0f);
     public Color Red2 = new Color(0.5f, 0f, 0f);
     public float changeTime = 5f;
+    public float SmoothTime = 2f;
 
     private ParticleSystem.MainModule mainModule;
     private Renderer objectRenderer;
     private Material[] objectMaterials;
     private float timer;
+    private float SmoothingTimer;
+    private Color currentColor;
 
     void Start()
     {
-        // Obtén el módulo principal del ParticleSystem
         mainModule = AiguaFont.main;
 
-        // Establece el color inicial de las partículas (dos tonos de azul)
         mainModule.startColor = new ParticleSystem.MinMaxGradient(Blue1, Blue2);
 
         objectRenderer = GetComponent<Renderer>();
         objectMaterials = objectRenderer.materials;
 
-        timer = 0f; // Inicia el temporizador
+        timer = 0f;
+        SmoothingTimer = 0f;
+        currentColor = Blue1;
     }
 
     void Update()
     {
-        // Contador para cambiar el color después de cierto tiempo
         timer += Time.deltaTime;
 
-        if (timer >= changeTime)
+        if (timer >= changeTime && SmoothingTimer <= SmoothTime)
         {
-            // Cambiar el color de las partículas (dos tonos de rojo)
             mainModule.startColor = new ParticleSystem.MinMaxGradient(Red1, Red2);
 
             if (objectMaterials != null)
             {
-                // Aquí buscamos el material de agua específico (fountain_oceanShader1)
                 foreach (var material in objectMaterials)
                 {
-                    if (material.name.Contains("Fountain_oceanShader1")) // Verifica el nombre del material
+                    if (material.name.Contains("Fountain_oceanShader1"))
                     {
                         Debug.Log("Ha llegado al material!");
-                        // Cambia el color del material del agua
-                        material.SetColor("_BaseColor", Red1);  // Cambia a rojo
+
+                        SmoothingTimer += Time.deltaTime;
+                        float t = Mathf.Clamp01(SmoothingTimer / SmoothTime);
+
+                        Color newColor = Color.Lerp(currentColor, Red1, t);
+
+                        material.SetColor("_BaseColor", newColor);
                     }
                 }
             }
