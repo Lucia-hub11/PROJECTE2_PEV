@@ -34,8 +34,8 @@ public class EnemyDestruction : MonoBehaviour
         //FindObjectOfType<ScreenEffect>().OnObjectDestroyed();
         //FindObjectOfType<WaterBlood>().OnObjectDestroyed();
 
-        ScreenEffect screenEffect = FindObjectOfType<ScreenEffect>();
-        WaterBlood waterBlood = FindObjectOfType<WaterBlood>();
+        //ScreenEffect screenEffect = FindObjectOfType<ScreenEffect>();
+        //WaterBlood waterBlood = FindObjectOfType<WaterBlood>();
 
         if (screenEffect != null)
         {
