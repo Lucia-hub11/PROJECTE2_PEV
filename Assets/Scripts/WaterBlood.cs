@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class WaterBlood : MonoBehaviour
 {
+    public float Range = 10;
+    public Transform WayPoint;
+
     public ParticleSystem AiguaFont;
     public Color Blue1 = new Color(0.18f, 0.67f, 0.85f);
     public Color Blue2 = new Color(0.37f, 0.74f, 0.82f);
     public Color Red1 = new Color(1f, 0f, 0f);
     public Color Red2 = new Color(0.5f, 0f, 0f);
-    public float changeTime = 5f;
+    //public float changeTime = 5f;
     public float SmoothTime = 2f;
 
     private ParticleSystem.MainModule mainModule;
@@ -18,6 +21,12 @@ public class WaterBlood : MonoBehaviour
     private float timer;
     private float SmoothingTimer;
     private Color currentColor;
+
+    private bool IsDestroyed = false;
+    public void OnObjectDestroyed()
+    {
+        IsDestroyed = true;
+    }
 
     void Start()
     {
@@ -35,29 +44,47 @@ public class WaterBlood : MonoBehaviour
 
     void Update()
     {
-        timer += Time.deltaTime;
-
-        if (timer >= changeTime && SmoothingTimer <= SmoothTime)
+        if(IsDetected() && IsDestroyed)
         {
-            mainModule.startColor = new ParticleSystem.MinMaxGradient(Red1, Red2);
+            timer += Time.deltaTime;
 
-            if (objectMaterials != null)
+            if (/*timer >= changeTime && */SmoothingTimer <= SmoothTime)
             {
-                foreach (var material in objectMaterials)
+                mainModule.startColor = new ParticleSystem.MinMaxGradient(Red1, Red2);
+
+                if (objectMaterials != null)
                 {
-                    if (material.name.Contains("Fountain_oceanShader1"))
+                    foreach (var material in objectMaterials)
                     {
-                        Debug.Log("Ha llegado al material!");
+                        if (material.name.Contains("Fountain_oceanShader1"))
+                        {
+                            Debug.Log("Ha llegado al material!");
 
-                        SmoothingTimer += Time.deltaTime;
-                        float t = Mathf.Clamp01(SmoothingTimer / SmoothTime);
+                            SmoothingTimer += Time.deltaTime;
+                            float t = Mathf.Clamp01(SmoothingTimer / SmoothTime);
 
-                        Color newColor = Color.Lerp(currentColor, Red1, t);
+                            Color newColor = Color.Lerp(currentColor, Red1, t);
 
-                        material.SetColor("_BaseColor", newColor);
+                            material.SetColor("_BaseColor", newColor);
+                        }
                     }
                 }
             }
         }
+    }
+
+    public bool IsDetected()
+    {
+        if (IsNearFountain(WayPoint))
+            return true;
+
+        return false;
+    }
+
+
+    private bool IsNearFountain(Transform target)
+    {
+        return Vector3.Distance(transform.position, target.position) < Range;
+
     }
 }

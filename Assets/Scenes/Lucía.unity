@@ -522,12 +522,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d8506b02196894b9321561f6054c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Range: 10
+  WayPoint: {fileID: 0}
   AiguaFont: {fileID: 1009110194}
   Blue1: {r: 0.18, g: 0.67, b: 0.85, a: 1}
   Blue2: {r: 0.37, g: 0.74, b: 0.82, a: 1}
   Red1: {r: 1, g: 0, b: 0, a: 1}
   Red2: {r: 0.5, g: 0, b: 0, a: 1}
-  changeTime: 3
   SmoothTime: 2
 --- !u!1 &472858773
 GameObject:
@@ -1568,7 +1569,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 2
       minColor: {r: 0.37647063, g: 0.74509805, b: 0.8196079, a: 1}
-      maxColor: {r: 1, g: 0, b: 0, a: 1}
+      maxColor: {r: 0, g: 0.6942835, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
