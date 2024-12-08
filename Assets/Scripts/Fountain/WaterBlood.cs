@@ -12,7 +12,6 @@ public class WaterBlood : MonoBehaviour
     public Color Blue2 = new Color(0.37f, 0.74f, 0.82f);
     public Color Red1 = new Color(1f, 0f, 0f);
     public Color Red2 = new Color(0.5f, 0f, 0f);
-    //public float changeTime = 5f;
     public float SmoothTime = 2f;
 
     private ParticleSystem.MainModule mainModule;
@@ -53,7 +52,7 @@ public class WaterBlood : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            if (/*timer >= changeTime && */SmoothingTimer <= SmoothTime)
+            if (SmoothingTimer <= SmoothTime)
             {
                 mainModule.startColor = new ParticleSystem.MinMaxGradient(Red1, Red2);
 

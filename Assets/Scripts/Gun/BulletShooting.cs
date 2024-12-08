@@ -8,7 +8,6 @@ public class BulletShooting : MonoBehaviour
     public float bulletspeed;
     public GameObject Spark;
 
-    // Start is called before the first frame update
     void Start()
     {
         _rg = GetComponent<Rigidbody>();
@@ -25,11 +24,5 @@ public class BulletShooting : MonoBehaviour
     private void Applyspeed()
     {
         _rg.velocity = transform.forward * bulletspeed;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
