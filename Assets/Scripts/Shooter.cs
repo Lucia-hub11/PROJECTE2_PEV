@@ -16,6 +16,8 @@ public class Shooter : MonoBehaviour
 
     public LayerMask GroundColliderLayerMask;
 
+    public static Action OnBullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,5 +52,6 @@ public class Shooter : MonoBehaviour
     private void SpawnBullet()
     {
         Instantiate(Prefab, BulletSpawn.transform.position, BulletSpawn.transform.rotation);
+        OnBullet?.Invoke();
     }
 }
