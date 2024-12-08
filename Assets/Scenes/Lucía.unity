@@ -495,13 +495,41 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: d75f646a2560abd42b8047176669abe0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1153485758}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -8260016565117357565, guid: d75f646a2560abd42b8047176669abe0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 452868803}
   m_SourcePrefab: {fileID: 100100000, guid: d75f646a2560abd42b8047176669abe0, type: 3}
 --- !u!4 &272094475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d75f646a2560abd42b8047176669abe0, type: 3}
   m_PrefabInstance: {fileID: 272094474}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &452868799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8260016565117357565, guid: d75f646a2560abd42b8047176669abe0, type: 3}
+  m_PrefabInstance: {fileID: 272094474}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &452868803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452868799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d8506b02196894b9321561f6054c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range: 7
+  WayPoint: {fileID: 0}
+  AiguaFont: {fileID: 1009110194}
+  Blue1: {r: 0.18, g: 0.67, b: 0.85, a: 1}
+  Blue2: {r: 0.37, g: 0.74, b: 0.82, a: 1}
+  Red1: {r: 1, g: 0, b: 0, a: 1}
+  Red2: {r: 0.5, g: 0, b: 0, a: 1}
+  SmoothTime: 2
 --- !u!1 &472858773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1569,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 2
       minColor: {r: 0.37647063, g: 0.74509805, b: 0.8196079, a: 1}
-      maxColor: {r: 0.2901961, g: 0.6784314, b: 0.854902, a: 1}
+      maxColor: {r: 0, g: 0.6942835, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6729,13 +6757,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1704916237}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.025224678, y: -0.6956756, z: 0.040115368, w: 0.7167915}
-  m_LocalPosition: {x: 5.836, y: 1.046, z: -3.56}
+  m_LocalRotation: {x: 0.13496271, y: -0.6812712, z: 0.14643537, w: 0.70442265}
+  m_LocalPosition: {x: 2.73, y: 2.78, z: -0.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 5.277, y: -88.228, z: 1.29}
+  m_LocalEulerAnglesHint: {x: 22.934, y: -87.803, z: 1.394}
 --- !u!114 &1704916241
 MonoBehaviour:
   m_ObjectHideFlags: 0
