@@ -9,24 +9,16 @@ public class Shooter : MonoBehaviour
     InputControllers _inputs;
 
     public GameObject Prefab;
-
     public GameObject BulletSpawn;
-
     public LayerMask DefaultColliderLayerMask;
-
     public LayerMask GroundColliderLayerMask;
-
     public static Action OnBullet;
 
-    // Start is called before the first frame update
     void Start()
     {
         _inputs = GetComponent<InputControllers>();
     }
 
-
-
-    // Update is called once per frame
     void Update()
     {
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
