@@ -10,7 +10,6 @@ public class GroundChecker : MonoBehaviour
     private bool _grounded;
     public bool Grounded => _grounded;
 
-    // Update is called once per frame
     void Update()
     {
         _grounded = Physics.CheckSphere(transform.position, Radius, NewGround);

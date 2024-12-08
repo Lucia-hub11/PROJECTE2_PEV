@@ -5,21 +5,20 @@ using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
-    public float Sensitivity = 30f; // Sensibilidad del ratón
-    public float MaxVerticalAngle = 40f; // Límite superior de inclinación
-    public float MinVerticalAngle = -20f; // Límite inferior de inclinación
+    public float Sensitivity = 30f;
+    public float MaxVerticalAngle = 40f;
+    public float MinVerticalAngle = -20f;
 
-    private float _verticalRotation = 0f; // Rotación acumulativa vertical
-    public InputControllers _inputs; // Entrada personalizada
+    private float _verticalRotation = 0f; // Rotació acumulativa vertical
+    public InputControllers _inputs;
 
-    private Transform _cameraHolder; // Referencia al objeto padre de la cámara
+    private Transform _cameraHolder;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        // Asignar el objeto padre (holder) que rotará la cámara
         _cameraHolder = transform.parent;
     }
 
@@ -32,12 +31,12 @@ public class CameraController : MonoBehaviour
     {
         if (_inputs == null || _cameraHolder == null) return;
 
-        // Rotación vertical (aplicada al holder para girar la cámara alrededor del jugador)
+        // Rotació vertical (aplicada al holder per girar la càmara al voltant del jugador)
         _verticalRotation -= _inputs.Look.y * Sensitivity * Time.deltaTime;
         _verticalRotation = Mathf.Clamp(_verticalRotation, MinVerticalAngle, MaxVerticalAngle);
         _cameraHolder.localRotation = Quaternion.Euler(_verticalRotation, _cameraHolder.localRotation.eulerAngles.y, 0f);
 
-        // Rotación horizontal (gira el holder en el eje Y)
+        // Rotació horitzontal (gira el holder en l'eix Y)
         _cameraHolder.Rotate(Vector3.up * _inputs.Look.x * Sensitivity * Time.deltaTime, Space.World);
     }
 }

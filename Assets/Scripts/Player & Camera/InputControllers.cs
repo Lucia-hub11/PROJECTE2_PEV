@@ -41,10 +41,9 @@ public class InputControllers : MonoBehaviour
     {
         _jump = false;
         _shoot = false;
-        //_interact = false;
         if (_interact)
         {
-            _interact = false;  // Solo lo reseteamos después de que se haya procesado
+            _interact = false;
         }
     }
 
