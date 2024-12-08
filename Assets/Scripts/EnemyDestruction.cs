@@ -31,8 +31,21 @@ public class EnemyDestruction : MonoBehaviour
 
     void OnDestroy()
     {
-        FindObjectOfType<ScreenEffect>().OnObjectDestroyed();
-        FindObjectOfType<WaterBlood>().OnObjectDestroyed();
+        //FindObjectOfType<ScreenEffect>().OnObjectDestroyed();
+        //FindObjectOfType<WaterBlood>().OnObjectDestroyed();
+
+        ScreenEffect screenEffect = FindObjectOfType<ScreenEffect>();
+        WaterBlood waterBlood = FindObjectOfType<WaterBlood>();
+
+        if (screenEffect != null)
+        {
+            screenEffect.OnObjectDestroyed();
+        }
+
+        if (waterBlood != null)
+        {
+            waterBlood.OnObjectDestroyed();
+        }
     }
 
     // Update is called once per frame
