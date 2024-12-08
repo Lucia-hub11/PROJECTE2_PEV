@@ -9,10 +9,10 @@ public class Vision : MonoBehaviour
     
     public Transform WayPoint;
 
-    //private void OnDrawGizmos() //per veure el rang on es mes clarament
-    //{
-    //    Gizmos.DrawWireSphere(transform.position, Range);
-    //}
+    private void OnDrawGizmos() //per veure el rang on es mes clarament
+    {
+        Gizmos.DrawWireSphere(transform.position, Range);
+    }
 
 
     void Start()
