@@ -14,6 +14,8 @@ public class InputControllers : MonoBehaviour
     private bool _shoot;
     public bool Shoot => _shoot;
 
+    private bool _interact;
+    public bool Interact => _interact;
 
     private void OnMove(InputValue input)
     {
@@ -30,10 +32,20 @@ public class InputControllers : MonoBehaviour
         _shoot = true;
     }
 
+    private void OnInteract()
+    {
+        _interact = true;
+    }
+
     private void LateUpdate()
     {
         _jump = false;
         _shoot = false;
+        //_interact = false;
+        if (_interact)
+        {
+            _interact = false;  // Solo lo reseteamos después de que se haya procesado
+        }
     }
 
     private Vector2 _look;
