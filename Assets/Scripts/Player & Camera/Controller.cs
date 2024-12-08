@@ -23,7 +23,6 @@ public class Controller : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
     void Start()
     {
         anim=GetComponent<Animator>();
@@ -31,7 +30,7 @@ public class Controller : MonoBehaviour
         _groundChecker = GetComponentInChildren<GroundChecker>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         x = Input.GetAxis("Horizontal");
@@ -42,6 +41,7 @@ public class Controller : MonoBehaviour
         anim.SetFloat("VelX", x);
         anim.SetFloat("VelY", y);
 
+        // animació salt
         if (_groundChecker.Grounded)
         {
             anim.SetBool("Grounded", true);
@@ -52,40 +52,20 @@ public class Controller : MonoBehaviour
                 anim.SetBool("Salto", false);
             }
 
-            // Si se presiona espacio, inicia el salto
+            // Si es fa clic a l'espai, inicia el salt
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isJumping=true;
-                anim.SetBool("Salto", true); // Activa la animación de salto
+                anim.SetBool("Salto", true); // Activa l'animació de saltar
                 rb.AddForce(new Vector3(0, fuerzaSalto, 0), ForceMode.Impulse);
             }
-            //else
-            //{
-            //    anim.SetBool("Salto", false); // Asegúrate de desactivar "Salto" si está en el suelo
-            //}
+
         }
         else
         {
             anim.SetBool("Grounded", false);
         }
 
-        //if (Input.GetKeyDown("space"))
-        //{
-        //    anim.SetBool("Salto", true);
-        //}
-        //if (!Input.GetKeyDown("space"))
-        //{
-        //    anim.SetBool("Salto", false);
-        //}
-
-        // animació salt
-
     }
 
-    //per desactivar les animacions de salt
-    private void Caigo()
-    {
-        anim.SetBool("Grounded", false);
-        anim.SetBool("Salto", false);
-    }
 }
