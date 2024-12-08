@@ -13,7 +13,6 @@ public class EnemyDestruction : MonoBehaviour
     public static Action OnParty;
     
 
-    // Start is called before the first frame update
     void Start()
     {
         _rg = GetComponent<Rigidbody>();
@@ -38,12 +37,6 @@ public class EnemyDestruction : MonoBehaviour
 
     void OnDestroy()
     {
-        //FindObjectOfType<ScreenEffect>().OnObjectDestroyed();
-        //FindObjectOfType<WaterBlood>().OnObjectDestroyed();
-
-        //ScreenEffect screenEffect = FindObjectOfType<ScreenEffect>();
-        //WaterBlood waterBlood = FindObjectOfType<WaterBlood>();
-
         if (screenEffect != null)
         {
             screenEffect.OnObjectDestroyed();
@@ -55,9 +48,4 @@ public class EnemyDestruction : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
