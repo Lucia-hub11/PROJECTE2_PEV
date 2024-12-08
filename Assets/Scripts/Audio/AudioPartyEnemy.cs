@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioPartyEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         EnemyDestruction.OnParty += PartyBlower;

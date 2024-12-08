@@ -9,12 +9,10 @@ public class Vision : MonoBehaviour
     
     public Transform WayPoint;
 
-    private void OnDrawGizmos() //per veure el rang on es mes clarament
-    {
-        Gizmos.DrawWireSphere(transform.position, Range);
-    }
-
-
+    //private void OnDrawGizmos() //per veure el rang on es mes clarament
+    //{
+    //    Gizmos.DrawWireSphere(transform.position, Range);
+    //}
     void Start()
     {
 
@@ -35,7 +33,6 @@ public class Vision : MonoBehaviour
         return false;
     }
 
-    
     private bool IsInRange(Transform target)
     {
         return Vector3.Distance(transform.position, target.position) < Range;
