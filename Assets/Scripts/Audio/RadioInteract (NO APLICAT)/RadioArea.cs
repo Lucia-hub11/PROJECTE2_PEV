@@ -3,16 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//SCRIPT NO APLICAT
+
 public class RadioArea : MonoBehaviour
 {
     public float RadioRange = 4;
 
     public Transform WayPoint;
 
-    private void OnDrawGizmos() //per veure el rang on es mes clarament
-    {
-        Gizmos.DrawWireSphere(transform.position, RadioRange);
-    }
+    //private void OnDrawGizmos() //per veure el rang on es mes clarament
+    //{
+    //    Gizmos.DrawWireSphere(transform.position, RadioRange);
+    //}
 
     // Start is called before the first frame update
     void Start()

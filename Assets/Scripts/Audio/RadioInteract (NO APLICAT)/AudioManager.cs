@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 //using UnityEngine.InputSystem;
 
+//SCRIPT NO APLICAT
+//Intent de interacció amb la radio
+
 public class AudioManager : MonoBehaviour
 {
     InputControllers _inputs;
