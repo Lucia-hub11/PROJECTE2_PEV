@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterBlood : MonoBehaviour
 {
-    public float Range = 10;
+    public float Range = 7;
     public Transform WayPoint;
 
     public ParticleSystem AiguaFont;
@@ -21,6 +21,11 @@ public class WaterBlood : MonoBehaviour
     private float timer;
     private float SmoothingTimer;
     private Color currentColor;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, Range);
+    }
 
     private bool IsDestroyed = false;
     public void OnObjectDestroyed()

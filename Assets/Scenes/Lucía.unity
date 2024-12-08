@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d8506b02196894b9321561f6054c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 10
+  Range: 7
   WayPoint: {fileID: 0}
   AiguaFont: {fileID: 1009110194}
   Blue1: {r: 0.18, g: 0.67, b: 0.85, a: 1}
