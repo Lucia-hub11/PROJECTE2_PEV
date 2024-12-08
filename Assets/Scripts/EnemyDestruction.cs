@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,9 @@ public class EnemyDestruction : MonoBehaviour
     private Rigidbody _rg;
     public GameObject Explosion;
     private ScreenEffect screenEffect;
+
+    public static Action OnParty;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,9 @@ public class EnemyDestruction : MonoBehaviour
         }
         Destroy(gameObject);
         Destroy(ExplosionSystem, 1f);
+        OnParty?.Invoke();
+        
+
     }
 
     void OnDestroy()
