@@ -11,6 +11,8 @@ public class RadioArea : MonoBehaviour
 
     public Transform WayPoint;
 
+    public float Weight;
+
     //private void OnDrawGizmos() //per veure el rang on es mes clarament
     //{
     //    Gizmos.DrawWireSphere(transform.position, RadioRange);
@@ -51,5 +53,12 @@ public class RadioArea : MonoBehaviour
     private bool IsInRadioRange(Transform target)
     {
         return Vector3.Distance(transform.position, target.position) < RadioRange;
+    }
+
+    private void OnAnimatorIK(int layerIndex)
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.SetIKPosition(AvatarIKGoal.RightHand, WayPoint.position);
+        anim.SetIKPositionWeight(AvatarIKGoal.RightHand, Weight);
     }
 }

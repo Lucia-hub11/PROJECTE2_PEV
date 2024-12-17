@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    InputControllers _inputs;
+    public InputControllers _inputs;
     public RadioArea radioArea;
     private AudioSource MusicaInfantil;
 
@@ -16,12 +16,12 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _inputs = GetComponent<InputControllers>();
+
         if (_inputs == null)
         {
             Debug.LogError("InputControllers no està assignat o no es troba al mateix GameObject.");
         }
-        
+
         MusicaInfantil = GetComponent<AudioSource>();
 
     }
