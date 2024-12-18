@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //using UnityEngine.InputSystem;
 
-//SCRIPT NO APLICAT
+//SCRIPT ara si APLICAT
 //Intent de interacció amb la radio
 
 public class AudioManager : MonoBehaviour
@@ -66,10 +66,10 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            if (MusicaInfantil.isPlaying)
-            {
-                MusicaInfantil.Stop();
-            }
+            //if (MusicaInfantil.isPlaying)
+            //{
+            //    MusicaInfantil.Stop();
+            //}
         }
 
 
