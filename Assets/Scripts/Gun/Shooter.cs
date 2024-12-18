@@ -13,23 +13,24 @@ public class Shooter : MonoBehaviour
     public LayerMask DefaultColliderLayerMask;
     public LayerMask GroundColliderLayerMask;
     public static Action OnBullet;
-
+    public Transform GunPosition;
     void Start()
     {
-        _inputs = GetComponent<InputControllers>();
+        _inputs = GetComponentInParent<InputControllers>();
     }
 
     void Update()
     {
+        transform.position = GunPosition.position;
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         if (Physics.Raycast(ray, out RaycastHit raycastHitDefault, 999f, DefaultColliderLayerMask))
         {
-            BulletSpawn.transform.LookAt(raycastHitDefault.point);
+            transform.LookAt(raycastHitDefault.point);
         }
         if (Physics.Raycast(ray, out RaycastHit raycastHitGround, 999f, GroundColliderLayerMask))
         {
-            BulletSpawn.transform.LookAt(raycastHitGround.point);
+            transform.LookAt(raycastHitGround.point);
         }
 
         if (ShouldShoot())

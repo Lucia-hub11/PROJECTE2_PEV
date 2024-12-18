@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float AirControl = 0.1f;
 
     private Vector3 _lastVelocity;
+    public float WeightIK;
+    public Transform WaypointGun;
 
     void Start()
     {
@@ -93,5 +95,12 @@ public class PlayerMovement : MonoBehaviour
             key_collected = true;
             keyDoorAnimator.SetBool("Key Collected", key_collected);
         }
+    }
+    private void OnAnimatorIK(int layerIndex)
+    {
+        Animator anim = GetComponent<Animator>();
+        anim.SetIKPosition(AvatarIKGoal.RightHand, WaypointGun.position);
+        anim.SetIKPositionWeight(AvatarIKGoal.RightHand, WeightIK);
+        anim.SetIKPositionWeight(AvatarIKGoal.LeftHand, WeightIK);
     }
 }
