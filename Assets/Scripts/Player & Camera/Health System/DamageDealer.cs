@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float Damage = 5;
+    
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ITakeDamage[] damageTakers =
+            collision.collider.GetComponent<ITakeDamage>();
+        if (damageTakers != null)
+        {
+            foreach (var item in damageTakers)
+            {
+                item.TakeDamage(Damage);
+            }
+        }
     }
 }
