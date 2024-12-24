@@ -10,28 +10,48 @@ public class EnemyDestruction : MonoBehaviour
     private ScreenEffect screenEffect;
     private WaterBlood waterBlood;
 
+    //audio
     public static Action OnParty;
-    
+
 
     void Start()
     {
         _rg = GetComponent<Rigidbody>();
         screenEffect = FindObjectOfType<ScreenEffect>();
         waterBlood = FindObjectOfType<WaterBlood>();
+        Debug.Log("HOLA ?????");
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collision)
     {
-        GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
-        if (screenEffect != null)
+        //if (screenEffect != null)
+        //{
+        //    screenEffect.OnObjectDestroyed();
+        //    waterBlood.OnObjectDestroyed();
+        //}
+
+        if (collision.tag == "Bullet")
         {
-            screenEffect.OnObjectDestroyed();
-            waterBlood.OnObjectDestroyed();
+            Debug.Log("HOLA??");
+            GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Destroy(ExplosionSystem, 1f);
+            OnParty?.Invoke();
+
+            Debug.Log("ATACA PLAYER");
+            var healthComponent = collision.GetComponent<PlayerHealth>();
+            if (healthComponent != null)
+            {
+                healthComponent.TakeDamage(1);
+                Debug.Log("DAMAGE");
+            }
         }
-        Destroy(gameObject);
-        Destroy(ExplosionSystem, 1f);
-        OnParty?.Invoke();
-        
+        if (collision.tag == "Player")
+        {
+           
+        }
+
+
 
     }
 
