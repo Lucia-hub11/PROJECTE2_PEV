@@ -19,7 +19,6 @@ public class EnemyDestruction : MonoBehaviour
         _rg = GetComponent<Rigidbody>();
         screenEffect = FindObjectOfType<ScreenEffect>();
         waterBlood = FindObjectOfType<WaterBlood>();
-        Debug.Log("HOLA ?????");
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -32,13 +31,13 @@ public class EnemyDestruction : MonoBehaviour
 
         if (collision.tag == "Bullet")
         {
-            Debug.Log("HOLA??");
             GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(ExplosionSystem, 1f);
             OnParty?.Invoke();
-
-            Debug.Log("ATACA PLAYER");
+        }
+        if (collision.tag == "Player")
+        {
             var healthComponent = collision.GetComponent<PlayerHealth>();
             if (healthComponent != null)
             {
@@ -46,13 +45,6 @@ public class EnemyDestruction : MonoBehaviour
                 Debug.Log("DAMAGE");
             }
         }
-        if (collision.tag == "Player")
-        {
-           
-        }
-
-
-
     }
 
     void OnDestroy()

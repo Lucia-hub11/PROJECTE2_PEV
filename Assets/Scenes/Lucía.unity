@@ -22681,6 +22681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812960066}
   - component: {fileID: 1812960067}
+  - component: {fileID: 1812960068}
   m_Layer: 0
   m_Name: TriggerAmyDamage
   m_TagString: Player
@@ -22698,7 +22699,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7262748, z: -0, w: 0.6874045}
   m_LocalPosition: {x: 0, y: 0.698, z: 0}
-  m_LocalScale: {x: 0.3728311, y: 1.4893556, z: 0.3728311}
+  m_LocalScale: {x: 0.5226529, y: 1.8316095, z: 0.78776205}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1991449874}
@@ -22726,6 +22727,20 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1812960068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812960065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9361dc6874d46847a26e730e411c72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
 --- !u!1 &1818491597
 GameObject:
   m_ObjectHideFlags: 0
@@ -24648,7 +24663,6 @@ GameObject:
   - component: {fileID: 1991449870}
   - component: {fileID: 1991449877}
   - component: {fileID: 1991449876}
-  - component: {fileID: 1991449879}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -24848,20 +24862,6 @@ MonoBehaviour:
   y: 0
   fuerzaSalto: 0
   fuerzaExtra: 0
---- !u!114 &1991449879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991449868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9361dc6874d46847a26e730e411c72c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 3
-  currentHealth: 0
 --- !u!1001 &1997294735
 PrefabInstance:
   m_ObjectHideFlags: 0
