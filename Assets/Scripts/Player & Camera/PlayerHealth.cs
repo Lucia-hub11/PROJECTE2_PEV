@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    //public float maxHealth = 100;
+    public float currentHealth = 100;
 
-    void start()
+    public void TakeDamage(float amount)
     {
-        currentHealth = maxHealth;
-    }
+        //Debug.Log("DAMAGE " + amount);
+        currentHealth = currentHealth - amount;
 
-    public void TakeDamage(int amount)
-    {
-        currentHealth -= amount;
-
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
             //muerte
             Debug.Log("MUERTA");

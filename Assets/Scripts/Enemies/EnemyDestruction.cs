@@ -42,7 +42,6 @@ public class EnemyDestruction : MonoBehaviour
             if (healthComponent != null)
             {
                 healthComponent.TakeDamage(1);
-                Debug.Log("DAMAGE");
             }
         }
     }
