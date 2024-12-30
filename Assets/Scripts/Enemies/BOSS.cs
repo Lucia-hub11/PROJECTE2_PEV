@@ -5,58 +5,33 @@ using UnityEngine;
 
 public class BOSS : MonoBehaviour
 {
-    private Rigidbody _rg;
-    public GameObject Explosion;
-    private ScreenEffect screenEffect;
-    private WaterBlood waterBlood;
+    public float maxHealth = 100;
+    private float currentHealth;
+    public GameObject Player;
 
-    //audio
-    public static Action OnParty;
-
+    public static Action<float> OnDamage;
+    public static Action<float> OnApple;
 
     void Start()
     {
-        _rg = GetComponent<Rigidbody>();
-        screenEffect = FindObjectOfType<ScreenEffect>();
-        waterBlood = FindObjectOfType<WaterBlood>();
+        currentHealth = maxHealth;
+
     }
 
-    private void OnTriggerEnter(Collider collision)
+    public void TakeDamage(float amount)
     {
-        //if (screenEffect != null)
-        //{
-        //    screenEffect.OnObjectDestroyed();
-        //    waterBlood.OnObjectDestroyed();
-        //}
+        //Debug.Log("DAMAGE " + amount);
+        currentHealth = currentHealth - amount;
+        Debug.Log("CURRENT H " + currentHealth);
 
-        if (collision.tag == "Bullet")
+        OnDamage?.Invoke(currentHealth / maxHealth);
+        OnApple?.Invoke(currentHealth / maxHealth);
+
+        if (currentHealth <= 0)
         {
-            GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            Destroy(ExplosionSystem, 1f);
-            OnParty?.Invoke();
-        }
-        if (collision.tag == "Player")
-        {
-            var healthComponent = collision.GetComponent<PlayerHealth>();
-            if (healthComponent != null)
-            {
-                healthComponent.TakeDamage(5);
-            }
+            //muerte
+            //Destroy(Player);
+            Debug.Log("MUERTA");
         }
     }
-
-    void OnDestroy()
-    {
-        if (screenEffect != null)
-        {
-            screenEffect.OnObjectDestroyed();
-        }
-
-        if (waterBlood != null)
-        {
-            waterBlood.OnObjectDestroyed();
-        }
-    }
-
 }

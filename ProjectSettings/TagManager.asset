@@ -6,7 +6,9 @@ TagManager:
   tags:
   - KeyDoorCollider
   - Bullet
-  - ATACAR
+  - Enemy
+  - Boss
+  - Apple
   layers:
   - Default
   - TransparentFX

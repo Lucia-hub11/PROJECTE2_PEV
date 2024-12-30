@@ -28,23 +28,44 @@ public class EnemyDestruction : MonoBehaviour
         //    screenEffect.OnObjectDestroyed();
         //    waterBlood.OnObjectDestroyed();
         //}
-
-        if (collision.tag == "Bullet")
+        if(gameObject.tag == "Enemy")
         {
-            GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-            Destroy(ExplosionSystem, 1f);
-            OnParty?.Invoke();
-        }
-        if (collision.tag == "Player")
-        {
-            var healthComponent = collision.GetComponent<PlayerHealth>();
-            if (healthComponent != null)
+            if (collision.tag == "Bullet")
             {
-                healthComponent.TakeDamage(1);
+                GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                Destroy(ExplosionSystem, 1f);
+                OnParty?.Invoke();
+            }
+            if (collision.tag == "Player")
+            {
+                var healthComponent = collision.GetComponent<PlayerHealth>();
+                if (healthComponent != null)
+                {
+                    healthComponent.TakeDamage(1);
+                }
+            }
+        }
+        if (gameObject.tag == "Boss")
+        {
+            if (collision.tag == "Bullet")
+            {
+                GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                Destroy(ExplosionSystem, 1f);
+                OnParty?.Invoke();
+            }
+            if (collision.tag == "Player")
+            {
+                var healthComponent = collision.GetComponent<PlayerHealth>();
+                if (healthComponent != null)
+                {
+                    healthComponent.TakeDamage(10);
+                }
             }
         }
     }
+        
 
     void OnDestroy()
     {

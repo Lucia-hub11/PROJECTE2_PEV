@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour
         _mySlider.value = 1;
         _fillImage = _mySlider.fillRect.GetComponent<Image>();
         PlayerHealth.OnDamage += Redraw;
-       /* PlayerHealth.OnHeal += Redraw; */
+        PlayerHealth.OnApple += Redraw;
     }
 
     private void Redraw(float value)

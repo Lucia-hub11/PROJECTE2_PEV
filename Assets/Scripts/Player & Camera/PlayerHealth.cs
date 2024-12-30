@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject Player;
 
     public static Action<float> OnDamage;
+    public static Action<float> OnApple;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("CURRENT H " + currentHealth);
 
         OnDamage?.Invoke(currentHealth / maxHealth);
+        OnApple?.Invoke(currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {

@@ -9273,11 +9273,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546366390555157460, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 108.409
+      value: 101.78087
       objectReference: {fileID: 0}
     - target: {fileID: 8546366390555157460, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 275.9473
+      value: 285.19153
       objectReference: {fileID: 0}
     - target: {fileID: 8546366390555157460, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9285,11 +9285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546366390555157460, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.94
+      value: 5.01
       objectReference: {fileID: 0}
     - target: {fileID: 8546366390555157460, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.56
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 8546366390555157460, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22541,7 +22541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0584d8406e6ef54469da725ec8c7ff09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 0}
+  maxHealth: 100
+  Player: {fileID: 0}
 --- !u!65 &1768044012
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22661,6 +22662,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_Name
       value: bunny_fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
