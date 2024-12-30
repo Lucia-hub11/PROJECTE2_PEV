@@ -1468,7 +1468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c90f89799cb14efc98063fc745230b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  luzHabitacion: {fileID: 2002138868}
+  roomLight: {fileID: 2002138868}
 --- !u!4 &133712485
 Transform:
   m_ObjectHideFlags: 0

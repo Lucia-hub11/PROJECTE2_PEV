@@ -5,40 +5,35 @@ using UnityEngine.InputSystem;
 
 public class LightSwitch : MonoBehaviour
 {
-    public Light luzHabitacion; // Arrastra la luz en el editor
-    private bool jugadorCerca = false;
+    public Light roomLight; // Drag the light here in the editor
+    private bool isPlayerNearby = false;
 
-    private PlayerInput playerInput; // Referencia a PlayerInput del Input System
-    private InputAction interactAction; // Acción para interactuar
+    private PlayerInput playerInput; // Reference to PlayerInput from the Input System
+    private InputAction interactAction; // Action for interacting
 
     void Start()
     {
-        // Busca el PlayerInput en el jugador
+        // Find the PlayerInput in the player object
         playerInput = FindObjectOfType<PlayerInput>();
-        if (playerInput == null)
-        {
-            Debug.LogError("No se encontró un PlayerInput en la escena.");
-            return;
-        }
 
-        // Obtén la acción asociada con interactuar
-        interactAction = playerInput.actions["Interact"]; // Asegúrate de que "Interact" existe en tu mapa de acciones
+        // Get the action associated with interacting
+        interactAction = playerInput.actions["Interact"]; // Make sure "Interact" exists in your action map
     }
 
     void Update()
     {
-        // Comprueba si el jugador está cerca y ha pulsado interactuar
-        if (jugadorCerca && interactAction != null && interactAction.triggered)
+        // Check if the player is nearby and has pressed the interact button
+        if (isPlayerNearby && interactAction != null && interactAction.triggered)
         {
-            luzHabitacion.enabled = !luzHabitacion.enabled; // Cambia el estado de la luz
+            roomLight.enabled = !roomLight.enabled; // Toggle the light's state
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Asegúrate de que el Player tiene el tag "Player"
+        if (other.CompareTag("Player")) // Ensure the Player has the "Player" tag
         {
-            jugadorCerca = true;
+            isPlayerNearby = true;
         }
     }
 
@@ -46,7 +41,7 @@ public class LightSwitch : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            jugadorCerca = false;
+            isPlayerNearby = false;
         }
     }
 }
