@@ -1470,6 +1470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomLight: {fileID: 2002138868}
+  lampRenderer: {fileID: 1918371132}
   interactionText: {fileID: 846613430}
 --- !u!4 &133712485
 Transform:
@@ -23742,6 +23743,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f379d9af8dc37e4381ada65c0717adb, type: 3}
+--- !u!23 &1918371132 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6317578925029434746, guid: ac776bbe87f712345988ebb89b743c72, type: 3}
+  m_PrefabInstance: {fileID: 30603825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1919540936
 GameObject:
   m_ObjectHideFlags: 0
