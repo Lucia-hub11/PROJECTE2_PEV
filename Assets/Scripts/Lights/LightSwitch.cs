@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class LightSwitch : MonoBehaviour
 {
     public Light roomLight;
-    public Renderer lampRenderer; // Modificar l'emisi? de la textura de la llum
+    public Renderer lampRenderer; // Modificar l'emissi? de la textura de la llum
     public Text interactionText;
 
     private bool isPlayerNearby = false;
