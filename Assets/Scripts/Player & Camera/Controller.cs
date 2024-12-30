@@ -21,6 +21,8 @@ public class Controller : MonoBehaviour
     GroundChecker _groundChecker;
     private bool isJumping = false;
 
+    public bool hasPistool=false;
+
 
 
     void Start()
@@ -28,6 +30,10 @@ public class Controller : MonoBehaviour
         anim=GetComponent<Animator>();
         rb=GetComponent<Rigidbody>();
         _groundChecker = GetComponentInChildren<GroundChecker>();
+        hasPistool = true;
+
+        //Per a que quan jugues no es vegi el cursor per la patalla
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
