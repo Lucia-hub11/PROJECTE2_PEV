@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // Importar para usar UI
+using UnityEngine.UI;
 
 public class RadioArea : MonoBehaviour
 {
     public float RadioRange = 4;
     public Transform WayPoint;
-    public GameObject interactText; // Referencia al texto del Canvas
+    public GameObject interactText;
 
     private void OnDrawGizmos()
     {
@@ -19,7 +19,7 @@ public class RadioArea : MonoBehaviour
     {
         if (interactText != null)
         {
-            interactText.SetActive(false); // Asegurarse de que el texto esté oculto al inicio
+            interactText.SetActive(false);
         }
     }
 
