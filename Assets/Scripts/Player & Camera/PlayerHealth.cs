@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100;
     private float currentHealth;
     public GameObject Player;
+
+    public static Action<float> OnDamage;
 
     void Start()
     {
@@ -19,6 +22,9 @@ public class PlayerHealth : MonoBehaviour
         //Debug.Log("DAMAGE " + amount);
         currentHealth = currentHealth - amount;
         Debug.Log("CURRENT H " + currentHealth);
+
+        OnDamage?.Invoke(currentHealth / maxHealth);
+
         if (currentHealth <= 0)
         {
             //muerte

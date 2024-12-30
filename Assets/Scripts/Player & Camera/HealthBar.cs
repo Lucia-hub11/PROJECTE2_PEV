@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Slider _mySlider;
     void Start()
     {
-        
+        _mySlider = GetComponent<Slider>();
+        PlayerHealth.OnDamage += Redraw;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Redraw(float value)
     {
-        
+        _mySlider.value = value;
     }
 }
