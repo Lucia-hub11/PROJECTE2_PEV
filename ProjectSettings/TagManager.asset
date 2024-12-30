@@ -6,6 +6,7 @@ TagManager:
   tags:
   - KeyDoorCollider
   - Bullet
+  - Apple
   layers:
   - Default
   - TransparentFX
