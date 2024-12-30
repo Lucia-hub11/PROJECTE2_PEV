@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI; // Importar para trabajar con UI
 
 public class LightSwitch : MonoBehaviour
 {
     public Light roomLight; // Drag the light here in the editor
+    public Text interactionText; // Texto en el canvas para mostrar el mensaje
     private bool isPlayerNearby = false;
 
     private PlayerInput playerInput; // Reference to PlayerInput from the Input System
@@ -18,6 +20,12 @@ public class LightSwitch : MonoBehaviour
 
         // Get the action associated with interacting
         interactAction = playerInput.actions["Interact"]; // Make sure "Interact" exists in your action map
+
+        // Aseg?rate de que el texto no sea visible al inicio
+        if (interactionText != null)
+        {
+            interactionText.gameObject.SetActive(false);
+        }
     }
 
     void Update()
@@ -34,6 +42,12 @@ public class LightSwitch : MonoBehaviour
         if (other.CompareTag("Player")) // Ensure the Player has the "Player" tag
         {
             isPlayerNearby = true;
+
+            // Mostrar el texto en el canvas
+            if (interactionText != null)
+            {
+                interactionText.gameObject.SetActive(true);
+            }
         }
     }
 
@@ -42,6 +56,12 @@ public class LightSwitch : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerNearby = false;
+
+            // Ocultar el texto en el canvas
+            if (interactionText != null)
+            {
+                interactionText.gameObject.SetActive(false);
+            }
         }
     }
 }
