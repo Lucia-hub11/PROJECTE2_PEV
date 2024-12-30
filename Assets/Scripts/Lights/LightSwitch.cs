@@ -1,28 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LightSwitch : MonoBehaviour
 {
     public Light luzHabitacion; // Arrastra la luz en el editor
     private bool jugadorCerca = false;
 
-    private InputControllers inputControllers; // Referencia al controlador de entrada
+    private PlayerInput playerInput; // Referencia a PlayerInput del Input System
+    private InputAction interactAction; // Acción para interactuar
 
     void Start()
     {
-        // Busca el componente InputControllers en el jugador
-        inputControllers = FindObjectOfType<InputControllers>();
-        if (inputControllers == null)
+        // Busca el PlayerInput en el jugador
+        playerInput = FindObjectOfType<PlayerInput>();
+        if (playerInput == null)
         {
-            Debug.LogError("No se encontró un InputControllers en la escena.");
+            Debug.LogError("No se encontró un PlayerInput en la escena.");
+            return;
         }
+
+        // Obtén la acción asociada con interactuar
+        interactAction = playerInput.actions["Interact"]; // Asegúrate de que "Interact" existe en tu mapa de acciones
     }
 
     void Update()
     {
         // Comprueba si el jugador está cerca y ha pulsado interactuar
-        if (jugadorCerca && inputControllers != null && inputControllers.Interact)
+        if (jugadorCerca && interactAction != null && interactAction.triggered)
         {
             luzHabitacion.enabled = !luzHabitacion.enabled; // Cambia el estado de la luz
         }
