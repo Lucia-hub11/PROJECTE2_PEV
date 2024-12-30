@@ -2,55 +2,54 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-//SCRIPT ara si APLICAT
+using UnityEngine.UI;
 
 public class RadioArea : MonoBehaviour
 {
     public float RadioRange = 4;
-
     public Transform WayPoint;
+    public GameObject interactText;
 
-    private void OnDrawGizmos() //per veure el rang on es mes clarament
+    private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, RadioRange);
     }
 
-
     void Start()
     {
-        
+        if (interactText != null)
+        {
+            interactText.SetActive(false);
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Debug.Log(IsRadioDetected());
-        //if (IsRadioDetected())
-        //{
-        //    Debug.Log("radioSi");
-        //}
-        //else
-        //{
-        //    Debug.Log("radioNO");
-        //}
+        if (IsRadioDetected())
+        {
+            ShowInteractText(true);
+        }
+        else
+        {
+            ShowInteractText(false);
+        }
     }
 
     public bool IsRadioDetected()
     {
-        if (IsInRadioRange(WayPoint))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    
+        return IsInRadioRange(WayPoint);
     }
+
     private bool IsInRadioRange(Transform target)
     {
         return Vector3.Distance(transform.position, target.position) < RadioRange;
     }
 
+    private void ShowInteractText(bool show)
+    {
+        if (interactText != null)
+        {
+            interactText.SetActive(show);
+        }
+    }
 }
