@@ -2440,6 +2440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RadioRange: 4
   WayPoint: {fileID: 489976274}
+  interactText: {fileID: 1954237556}
 --- !u!1 &203692936
 GameObject:
   m_ObjectHideFlags: 0
