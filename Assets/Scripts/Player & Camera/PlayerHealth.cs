@@ -15,7 +15,6 @@ public class PlayerHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-
     }
 
     public void TakeDamage(float amount)
@@ -25,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("CURRENT H " + currentHealth);
 
         OnDamage?.Invoke(currentHealth / maxHealth);
-        OnApple?.Invoke(currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {
@@ -33,5 +31,14 @@ public class PlayerHealth : MonoBehaviour
             //Destroy(Player);
             Debug.Log("MUERTA");
         }
+    }
+
+    public void TakeHealth(float amount)
+    {
+        //Debug.Log("DAMAGE " + amount);
+        currentHealth = currentHealth + amount;
+        Debug.Log("CURRENT H " + currentHealth);
+
+        OnApple?.Invoke(currentHealth / maxHealth);
     }
 }
