@@ -5,7 +5,7 @@ using System;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 100;
+    public float maxHealth = 200;
     private float currentHealth;
     public GameObject Player;
 

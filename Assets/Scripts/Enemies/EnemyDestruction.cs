@@ -50,10 +50,13 @@ public class EnemyDestruction : MonoBehaviour
         {
             if (collision.tag == "Bullet")
             {
-                GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-                Destroy(ExplosionSystem, 1f);
-                OnParty?.Invoke();
+                Debug.Log("BALA TOCA");
+                var bossHealth = gameObject.GetComponent<BOSS>();
+                if (bossHealth != null)
+                {
+                    Debug.Log("TIENE SALUD");
+                    bossHealth.TakeDamage(1);
+                }
             }
             if (collision.tag == "Player")
             {

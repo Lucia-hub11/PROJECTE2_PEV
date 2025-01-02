@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class BOSS : MonoBehaviour
 {
-    public float maxHealth = 100;
+    public float maxHealth = 5;
     private float currentHealth;
-    public GameObject Player;
+    public GameObject boss;
 
     public static Action<float> OnDamage;
-    public static Action<float> OnApple;
 
     void Start()
     {
@@ -20,18 +19,17 @@ public class BOSS : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        //Debug.Log("DAMAGE " + amount);
+        Debug.Log("DAMAGE BUNNY " + amount);
         currentHealth = currentHealth - amount;
-        Debug.Log("CURRENT H " + currentHealth);
+        Debug.Log("CURRENT BUNNY H " + currentHealth);
 
         OnDamage?.Invoke(currentHealth / maxHealth);
-        OnApple?.Invoke(currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {
             //muerte
-            //Destroy(Player);
-            Debug.Log("MUERTA");
+            Destroy(boss);
+            Debug.Log("MUERTO");
         }
     }
 }
