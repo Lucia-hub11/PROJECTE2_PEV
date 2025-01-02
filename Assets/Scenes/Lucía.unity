@@ -22622,7 +22622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146d9523c6e598a40ab02ba37bcf0d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosion: {fileID: 0}
+  Explosion: {fileID: 4416931467131347194, guid: afeeddf61af5bc14ca21894c5d7753cd, type: 3}
 --- !u!1001 &1776804420
 PrefabInstance:
   m_ObjectHideFlags: 0
