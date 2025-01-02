@@ -9,7 +9,7 @@ public class BOSS : MonoBehaviour
     private float currentHealth;
     public GameObject boss;
 
-    public static Action<float> OnDamage;
+    public static Action<float> OnBossDamage;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class BOSS : MonoBehaviour
         currentHealth = currentHealth - amount;
         Debug.Log("CURRENT BUNNY H " + currentHealth);
 
-        OnDamage?.Invoke(currentHealth / maxHealth);
+        OnBossDamage?.Invoke(currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {
