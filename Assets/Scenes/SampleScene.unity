@@ -67472,7 +67472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194228}
-  keyDoorAnimator: {fileID: 0}
+  keyDoorAnimator: {fileID: 780045100}
   WalkSpeed: 5
   JumpSpeed: 6.5
   AirControl: 0.1
