@@ -4589,6 +4589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &140317856
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5618,6 +5619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &167446166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10424,6 +10426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &279928992
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13718,6 +13721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &396939210
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17078,6 +17082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &472742161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17110,6 +17115,8 @@ GameObject:
   - component: {fileID: 473826590}
   - component: {fileID: 473826592}
   - component: {fileID: 473826591}
+  - component: {fileID: 473826593}
+  - component: {fileID: 473826594}
   m_Layer: 0
   m_Name: Apple NFT
   m_TagString: Untagged
@@ -17184,6 +17191,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473826589}
   m_Mesh: {fileID: -472147775963580301, guid: b60ca5c5b5a41ac42be2fb6a9daedd15, type: 3}
+--- !u!54 &473826593
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473826589}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &473826594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473826589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!1 &475807960
 GameObject:
   m_ObjectHideFlags: 0
@@ -19654,6 +19701,8 @@ GameObject:
   - component: {fileID: 546804164}
   - component: {fileID: 546804166}
   - component: {fileID: 546804165}
+  - component: {fileID: 546804167}
+  - component: {fileID: 546804168}
   m_Layer: 0
   m_Name: Apple NFT
   m_TagString: Untagged
@@ -19728,6 +19777,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546804163}
   m_Mesh: {fileID: -472147775963580301, guid: b60ca5c5b5a41ac42be2fb6a9daedd15, type: 3}
+--- !u!54 &546804167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546804163}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &546804168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546804163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!1 &547065094
 GameObject:
   m_ObjectHideFlags: 0
@@ -21473,6 +21562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &588952387
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21857,6 +21947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &597379320
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23228,6 +23319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &625721106
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23489,6 +23581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &630028920
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -25882,6 +25975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &703414517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29288,6 +29382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &799861769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29489,6 +29584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &814974071
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36585,6 +36681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &881269857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -39024,6 +39121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &953483281
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -39580,6 +39678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &962742751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40266,6 +40365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &978770419
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40654,6 +40754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &984389750
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42595,6 +42696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &1044640855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45023,6 +45125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1096229616
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47187,6 +47290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &1177050207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51691,6 +51795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1274055055
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52492,7 +52597,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1314946980}
-  - component: {fileID: 1314946981}
   - component: {fileID: 1314946983}
   m_Layer: 0
   m_Name: Apple
@@ -52517,18 +52621,6 @@ Transform:
   - {fileID: 546804164}
   m_Father: {fileID: 841709064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1314946981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314946979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1314946983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52544,7 +52636,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -58341,6 +58433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &1494100118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61382,6 +61475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1594853194
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -62835,6 +62929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &1640098581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64041,6 +64136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1676339815
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -64851,6 +64947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1715897037
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -65762,6 +65859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!65 &1752177550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68100,8 +68198,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1806492295}
-  - component: {fileID: 1806492296}
   - component: {fileID: 1806492298}
+  - component: {fileID: 1806492299}
   m_Layer: 0
   m_Name: Apple (2)
   m_TagString: Apple
@@ -68125,18 +68223,6 @@ Transform:
   - {fileID: 473826590}
   m_Father: {fileID: 841709064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1806492296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806492294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1806492298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68158,6 +68244,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0.066, y: 2.482, z: 3.949}
+--- !u!114 &1806492299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806492294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rb: {fileID: 473826593}
 --- !u!1 &1808708321
 GameObject:
   m_ObjectHideFlags: 0
@@ -70218,6 +70317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1873968588
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -70451,6 +70551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1875958766
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -72371,6 +72472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &1943263313
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -76201,6 +76303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &2047454330
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79143,6 +79246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3820ab6979fd0814781ebeecad39d500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rb: {fileID: 0}
 --- !u!54 &2134397464
 Rigidbody:
   m_ObjectHideFlags: 0

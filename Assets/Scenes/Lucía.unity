@@ -2047,6 +2047,7 @@ GameObject:
   - component: {fileID: 160272406}
   - component: {fileID: 160272405}
   - component: {fileID: 160272404}
+  - component: {fileID: 160272409}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Untagged
@@ -2146,12 +2147,39 @@ Transform:
   m_GameObject: {fileID: 160272403}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.75, y: 0.24, z: -23.89}
+  m_LocalPosition: {x: 10.75, y: 2.63, z: -23.89}
   m_LocalScale: {x: 0.62877, y: 0.62877, z: 0.62877}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &160272409
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160272403}
+  serializedVersion: 4
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &168394447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,6 +2703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RadioRange: 4
   WayPoint: {fileID: 489976274}
+  interactText: {fileID: 0}
 --- !u!1 &203692936
 GameObject:
   m_ObjectHideFlags: 0
