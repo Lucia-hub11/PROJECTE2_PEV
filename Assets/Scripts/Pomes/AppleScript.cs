@@ -6,55 +6,18 @@ public class AppleScript : MonoBehaviour
 {
     void Start()
     {
-        _rg = GetComponent<Rigidbody>();
-        screenEffect = FindObjectOfType<ScreenEffect>();
-        waterBlood = FindObjectOfType<WaterBlood>();
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        //if (screenEffect != null)
-        //{
-        //    screenEffect.OnObjectDestroyed();
-        //    waterBlood.OnObjectDestroyed();
-        //}
-        if (gameObject.tag == "Enemy")
+        if (collision.tag == "Player")
         {
-            if (collision.tag == "Bullet")
+            Debug.Log("ÑAM");
+            var healthComponent = collision.GetComponent<PlayerHealth>();
+            if (healthComponent != null)
             {
-                GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-                Destroy(ExplosionSystem, 1f);
-                OnParty?.Invoke();
-            }
-            if (collision.tag == "Player")
-            {
-                var healthComponent = collision.GetComponent<PlayerHealth>();
-                if (healthComponent != null)
-                {
-                    healthComponent.TakeDamage(1);
-                }
-            }
-        }
-        if (gameObject.tag == "Boss")
-        {
-            if (collision.tag == "Bullet")
-            {
-                Debug.Log("BALA TOCA");
-                var bossHealth = gameObject.GetComponent<BOSS>();
-                if (bossHealth != null)
-                {
-                    Debug.Log("TIENE SALUD");
-                    bossHealth.TakeDamage(1);
-                }
-            }
-            if (collision.tag == "Player")
-            {
-                var healthComponent = collision.GetComponent<PlayerHealth>();
-                if (healthComponent != null)
-                {
-                    healthComponent.TakeDamage(10);
-                }
+                healthComponent.TakeHealth(20);
+                Debug.Log("healthy");
             }
         }
     }
