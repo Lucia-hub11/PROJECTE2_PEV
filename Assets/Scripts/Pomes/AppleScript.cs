@@ -19,6 +19,8 @@ public class AppleScript : MonoBehaviour
                 healthComponent.TakeHealth(20);
                 Debug.Log("healthy");
             }
+
+            Destroy(gameObject);
         }
     }
 }
