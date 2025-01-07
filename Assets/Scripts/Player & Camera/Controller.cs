@@ -21,6 +21,8 @@ public class Controller : MonoBehaviour
     GroundChecker _groundChecker;
     private bool isJumping = false;
 
+    public bool hasPistol=false;
+
 
 
     void Start()
@@ -28,6 +30,9 @@ public class Controller : MonoBehaviour
         anim=GetComponent<Animator>();
         rb=GetComponent<Rigidbody>();
         _groundChecker = GetComponentInChildren<GroundChecker>();
+
+        hasPistol = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
@@ -66,6 +71,11 @@ public class Controller : MonoBehaviour
             anim.SetBool("Grounded", false);
         }
 
+        anim.SetBool("holdPistol", hasPistol);
+        if (hasPistol)
+        {
+            anim.SetLayerWeight(1, 1);
+        }
     }
 
 }
