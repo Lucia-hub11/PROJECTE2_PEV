@@ -62,8 +62,6 @@ public class WaterBlood : MonoBehaviour
                     {
                         if (material.name.Contains("Fountain_oceanShader1"))
                         {
-                            Debug.Log("Ha llegado al material!");
-
                             SmoothingTimer += Time.deltaTime;
                             float t = Mathf.Clamp01(SmoothingTimer / SmoothTime);
 

@@ -20,17 +20,13 @@ public class BOSS : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        Debug.Log("DAMAGE BUNNY " + amount);
         currentHealth = currentHealth - amount;
-        Debug.Log("CURRENT BUNNY H " + currentHealth);
-
         OnBossDamage?.Invoke(currentHealth / maxHealth);
 
         if (currentHealth <= 0)
         {
             //muerte
             Destroy(boss);
-            Debug.Log("MUERTO");
             WinScreen.Setup();
         }
     }
