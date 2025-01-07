@@ -24,7 +24,8 @@ public class Basement : MonoBehaviour
     {
         if (IsBasementDetected() && EnemiesDestroyed == 7)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            //AQUI VA LA ANIMACIÓN
             Debug.Log("ABRETE SESAMO ");
         }
     }
