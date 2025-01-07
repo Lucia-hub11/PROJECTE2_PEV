@@ -73,6 +73,7 @@ public class EnemyDestruction : MonoBehaviour
                 {
                     healthComponent.TakeDamage(10);
                 }
+                playerIsHere = true;
             }
         }
     }
