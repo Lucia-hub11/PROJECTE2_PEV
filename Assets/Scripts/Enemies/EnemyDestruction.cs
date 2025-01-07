@@ -14,6 +14,13 @@ public class EnemyDestruction : MonoBehaviour
     //audio
     public static Action OnParty;
 
+    private bool playerIsHere;
+
+    public bool IsPlayerHere() //bool per els Behaviours del enemy conills
+    {
+        return playerIsHere;
+    }
+
 
     void Start()
     {
@@ -46,6 +53,7 @@ public class EnemyDestruction : MonoBehaviour
                 {
                     healthComponent.TakeDamage(1);
                 }
+                playerIsHere = true;
             }
         }
         if (gameObject.tag == "Boss")
@@ -71,14 +79,22 @@ public class EnemyDestruction : MonoBehaviour
                 {
                     screenEffect.OnDamageTaken();
                 }
+                playerIsHere = true;
             }
         }
     }
-        
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerIsHere = false;
+        }
+    }
+
 
     void OnDestroy()
     {
-        //SHADER PRIMERA VERSIÓ
+        //SHADER PRIMERA VERSIï¿½
         //if (screenEffect != null)
         //{
         //    screenEffect.OnObjectDestroyed();
@@ -93,5 +109,7 @@ public class EnemyDestruction : MonoBehaviour
             basement.OnObjectDestroyed();
         }
     }
+
+    
 
 }

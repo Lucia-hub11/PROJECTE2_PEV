@@ -21,18 +21,29 @@ public class Controller : MonoBehaviour
     GroundChecker _groundChecker;
     private bool isJumping = false;
 
+    public bool hasPistol=false;
 
+    //Items
+    public GameObject nearItem;
+    public GameObject itemPrefab;
+    public Transform itemSlot;
+    public GameObject crosshair;  //Mirilla
 
     void Start()
     {
         anim=GetComponent<Animator>();
         rb=GetComponent<Rigidbody>();
         _groundChecker = GetComponentInChildren<GroundChecker>();
+
+        hasPistol = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 
     void Update()
     {
+        ItemLogic();
+
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
@@ -66,6 +77,33 @@ public class Controller : MonoBehaviour
             anim.SetBool("Grounded", false);
         }
 
+        anim.SetBool("holdPistol", hasPistol);
+        if (hasPistol)
+        {
+            anim.SetLayerWeight(1, 1);
+        }
     }
 
+    public void ItemLogic()
+    {
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer==LayerMask.NameToLayer("Item"))
+        {
+            Debug.Log("Hi ha un objecte aprop!");
+            nearItem = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Item"))
+        {
+            Debug.Log("Ja no hi ha items aprop...");
+            nearItem = null;
+        }
+    }
 }

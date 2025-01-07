@@ -1,4 +1,4 @@
-
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +17,18 @@ public class ChaseBehaviour : StateMachineBehaviour
     
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Move(animator, WP_target);
+        EnemyDestruction enemyDestruction = animator.GetComponent<EnemyDestruction>();
+        bool playerHere = enemyDestruction.IsPlayerHere();
+        if (!playerHere)
+        {
+            Move(animator, WP_target);
+        }
+        else
+        {
+            animator.SetBool("goBack", true);
+            animator.SetBool("isChasing", false); 
+        }
+
     }
     private void Move(Animator animator, Transform target)
     {
@@ -27,4 +38,10 @@ public class ChaseBehaviour : StateMachineBehaviour
         animator.transform.LookAt(targetPosition);
         animator.transform.Translate(animator.transform.forward * Speed * Time.deltaTime, Space.World);
     }
+
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    //animator.SetBool("goBack", false);
+    //    animator.SetBool("isChasing", false);
+    //}
 }

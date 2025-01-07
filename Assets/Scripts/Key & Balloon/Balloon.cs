@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour
 {
-    public GameObject key; // La llave que caerá
+    public GameObject key;
     private Rigidbody keyRb;
 
     private void Start()
@@ -14,7 +14,7 @@ public class Balloon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet")) // La bala debe tener el tag "Bullet"
+        if (other.CompareTag("Bullet"))
         {
             Explode();
         }
@@ -22,11 +22,10 @@ public class Balloon : MonoBehaviour
 
     void Explode()
     {
-        // Elimina el globo y permite que la llave caiga
         Destroy(gameObject);
         if (keyRb != null)
         {
-            keyRb.isKinematic = false; // Asegúrate de que pueda ser afectado por la física
+            keyRb.isKinematic = false;
         }
     }
 }
