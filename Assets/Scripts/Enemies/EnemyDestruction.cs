@@ -9,6 +9,7 @@ public class EnemyDestruction : MonoBehaviour
     public GameObject Explosion;
     private ScreenEffect screenEffect;
     private WaterBlood waterBlood;
+    private AngrierBunnies angrierBunnies;
 
     //audio
     public static Action OnParty;
@@ -26,6 +27,7 @@ public class EnemyDestruction : MonoBehaviour
         _rg = GetComponent<Rigidbody>();
         screenEffect = FindObjectOfType<ScreenEffect>();
         waterBlood = FindObjectOfType<WaterBlood>();
+        angrierBunnies = FindObjectOfType<AngrierBunnies>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -97,6 +99,8 @@ public class EnemyDestruction : MonoBehaviour
         {
             waterBlood.OnObjectDestroyed();
         }
+
+        angrierBunnies.OnObjectDestroyed();
     }
 
     

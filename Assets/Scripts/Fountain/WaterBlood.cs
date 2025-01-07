@@ -21,10 +21,10 @@ public class WaterBlood : MonoBehaviour
     private float SmoothingTimer;
     private Color currentColor;
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, Range);
-    }
+    //private void OnDrawGizmos() //per veure zona range
+    //{
+    //    Gizmos.DrawWireSphere(transform.position, Range);
+    //}
 
     private bool IsDestroyed = false;
     public void OnObjectDestroyed()

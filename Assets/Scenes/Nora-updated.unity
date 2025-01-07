@@ -10178,6 +10178,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956556
@@ -10246,6 +10254,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -10305,6 +10317,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 272520294}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 272520298}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &272520292 stripped
 Transform:
@@ -10385,6 +10400,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &272520298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272520293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &273468266
 GameObject:
   m_ObjectHideFlags: 0
@@ -14191,6 +14226,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956557
@@ -14259,6 +14302,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -14318,6 +14365,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 403336489}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 403336493}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &403336487 stripped
 Transform:
@@ -14398,6 +14448,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &403336493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403336488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &406204050
 GameObject:
   m_ObjectHideFlags: 0
@@ -17712,6 +17782,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956558
@@ -17780,6 +17858,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -17839,6 +17921,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 485346904}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 485346908}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &485346902 stripped
 Transform:
@@ -17919,6 +18004,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &485346908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485346903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &489976273
 GameObject:
   m_ObjectHideFlags: 0
@@ -24041,6 +24146,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956556
@@ -24109,6 +24222,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -24168,6 +24285,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 658855078}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 658855082}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &658855076 stripped
 Transform:
@@ -24248,6 +24368,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &658855082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658855077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &658870322
 GameObject:
   m_ObjectHideFlags: 0
@@ -25015,6 +25155,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956556
@@ -25083,6 +25231,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -25142,6 +25294,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 683754713}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683754717}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &683754711 stripped
 Transform:
@@ -25222,6 +25377,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &683754717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683754712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &685192595
 GameObject:
   m_ObjectHideFlags: 0
@@ -54352,6 +54527,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956556
@@ -54420,6 +54603,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -54479,6 +54666,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1362799408}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1362799412}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &1362799406 stripped
 Transform:
@@ -54559,6 +54749,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &1362799412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362799407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1365526043
 GameObject:
   m_ObjectHideFlags: 0
@@ -72469,6 +72679,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956556
@@ -72537,6 +72755,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -72596,6 +72818,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1946137131}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1946137135}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &1946137129 stripped
 Transform:
@@ -72676,6 +72901,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &1946137135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946137130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &1947901822
 GameObject:
   m_ObjectHideFlags: 0
@@ -74049,6 +74294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194228}
   keyDoorAnimator: {fileID: 780045100}
+  paintingAnimator: {fileID: 0}
   WalkSpeed: 5
   JumpSpeed: 6.5
   AirControl: 0.1
@@ -74228,6 +74474,11 @@ MonoBehaviour:
   y: 0
   fuerzaSalto: 0
   fuerzaExtra: 0
+  hasPistol: 0
+  nearItem: {fileID: 0}
+  itemPrefab: {fileID: 0}
+  itemSlot: {fileID: 0}
+  crosshair: {fileID: 0}
 --- !u!1 &1992014322
 GameObject:
   m_ObjectHideFlags: 0
@@ -78336,6 +78587,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1545104262}
     m_Modifications:
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+    - target: {fileID: -9009395475965182222, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.09956556
@@ -78404,6 +78663,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2648363436897018085, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
     - target: {fileID: 10041028939142797, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -78463,6 +78726,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2115113147}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2115113151}
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6c570f29958469b562e1f40dd2f8, type: 3}
 --- !u!4 &2115113145 stripped
 Transform:
@@ -78543,6 +78809,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   WayPoint: {fileID: 489976274}
+--- !u!114 &2115113151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115113146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e628a9bb87fa53419de5e980063c1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BunnyMaterialWhite: {fileID: 2100000, guid: b4c205527bab4544b8059c6153bffe4e, type: 2}
+  BunnyMaterialPink: {fileID: 2100000, guid: f695ad56b23615447a2aa13d65f0d721, type: 2}
+  BunnyMaterialBlack: {fileID: 2100000, guid: 0ba6581e88ddff4428f15c304366d49c, type: 2}
+  InitialColorWhite: {r: 1, g: 1, b: 1, a: 1}
+  InitialColorPink: {r: 0.8627451, g: 0.60784316, b: 0.68235296, a: 1}
+  InitialColorBlack: {r: 0.14117648, g: 0.14117648, b: 0.14117648, a: 1}
+  TargetColorRed: {r: 1, g: 0, b: 0, a: 1}
+  TargetColorBlack: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &2117309262
 GameObject:
   m_ObjectHideFlags: 0
@@ -79960,6 +80246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorCollider: {fileID: 1614392878}
+  paintingCollider: {fileID: 0}
 --- !u!65 &2145560088
 BoxCollider:
   m_ObjectHideFlags: 0
