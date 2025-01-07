@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator keyDoorAnimator;
     bool key_collected;
 
-    public Animator paintingAnimator; // Nuevo animator para la animación adicional
+    public Animator paintingAnimator;
     bool player_near_painting;
 
 
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
             keyDoorAnimator.SetBool("Key Collected", key_collected);
         }
 
-        if (other.gameObject.tag == "PictureCollider") // Verifica que tienes la llave
+        if (other.gameObject.tag == "PictureCollider")
         {
             player_near_painting = true;
             paintingAnimator.SetBool("Near Painting", player_near_painting);
