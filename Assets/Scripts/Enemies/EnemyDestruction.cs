@@ -11,6 +11,7 @@ public class EnemyDestruction : MonoBehaviour
     private WaterBlood waterBlood;
     private AngrierBunnies angrierBunnies;
     private Basement basement;
+    private DarkerLight darkerLight;
 
     //audio
     public static Action OnParty;
@@ -30,6 +31,8 @@ public class EnemyDestruction : MonoBehaviour
         waterBlood = FindObjectOfType<WaterBlood>();
         angrierBunnies = FindObjectOfType<AngrierBunnies>();
         basement = FindObjectOfType<Basement>();
+        darkerLight = FindObjectOfType<DarkerLight>();
+
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -102,16 +105,14 @@ public class EnemyDestruction : MonoBehaviour
         //    screenEffect.OnObjectDestroyed();
         //}
 
-        if (waterBlood != null)
-        {
-            waterBlood.OnObjectDestroyed();
-        }
+        waterBlood.OnObjectDestroyed();
 
         angrierBunnies.OnObjectDestroyed();
-        if (basement != null)
-        {
-            basement.OnObjectDestroyed();
-        }
+
+        basement.OnObjectDestroyed();
+
+        darkerLight.OnObjectDestroyed();
+
     }
 
     
