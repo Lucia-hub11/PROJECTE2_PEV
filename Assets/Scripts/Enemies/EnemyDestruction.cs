@@ -11,6 +11,8 @@ public class EnemyDestruction : MonoBehaviour
     private WaterBlood waterBlood;
     private AngrierBunnies angrierBunnies;
     private Basement basement;
+    private DarkerLight darkerLight;
+    private BrokeLantern lantern;
 
     //audio
     public static Action OnParty;
@@ -30,6 +32,9 @@ public class EnemyDestruction : MonoBehaviour
         waterBlood = FindObjectOfType<WaterBlood>();
         angrierBunnies = FindObjectOfType<AngrierBunnies>();
         basement = FindObjectOfType<Basement>();
+        darkerLight = FindObjectOfType<DarkerLight>();
+
+        lantern = FindObjectOfType<BrokeLantern>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -44,6 +49,9 @@ public class EnemyDestruction : MonoBehaviour
             if (collision.tag == "Bullet")
             {
                 GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
+
+                darkerLight?.OnObjectDestroyed(); //
+
                 Destroy(gameObject);
                 Destroy(ExplosionSystem, 1f);
                 OnParty?.Invoke();
@@ -54,6 +62,11 @@ public class EnemyDestruction : MonoBehaviour
                 if (healthComponent != null)
                 {
                     healthComponent.TakeDamage(1);
+                }
+                if (screenEffect != null)
+                {
+                    screenEffect.OnDamageTaken();
+                    Debug.Log("TIENE EL SCREEN EFFECT");
                 }
                 playerIsHere = true;
             }
@@ -75,11 +88,12 @@ public class EnemyDestruction : MonoBehaviour
                 var healthComponent = collision.GetComponent<PlayerHealth>();
                 if (healthComponent != null)
                 {
-                    healthComponent.TakeDamage(10);
+                    healthComponent.TakeDamage(5);
                 }
                 if (screenEffect != null)
                 {
                     screenEffect.OnDamageTaken();
+                    Debug.Log("TIENE EL SCREEN EFFECT");
                 }
                 playerIsHere = true;
             }
@@ -102,16 +116,13 @@ public class EnemyDestruction : MonoBehaviour
         //    screenEffect.OnObjectDestroyed();
         //}
 
-        if (waterBlood != null)
-        {
-            waterBlood.OnObjectDestroyed();
-        }
+        waterBlood.OnObjectDestroyed();
 
         angrierBunnies.OnObjectDestroyed();
-        if (basement != null)
-        {
-            basement.OnObjectDestroyed();
-        }
+
+        basement.OnObjectDestroyed();
+
+        lantern.OnObjectDestroyed();
     }
 
     

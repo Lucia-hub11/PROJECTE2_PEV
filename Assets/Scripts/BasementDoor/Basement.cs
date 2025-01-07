@@ -47,7 +47,6 @@ public class Basement : MonoBehaviour
 
     private bool IsInBasementRange(Transform target)
     {
-        // Aplica el offset al calcular la distancia
         return Vector3.Distance(transform.position + Offset, target.position) < DoorRange;
     }
 }

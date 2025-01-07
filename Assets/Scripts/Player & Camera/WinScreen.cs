@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameOverScreen : MonoBehaviour
+public class WinScreen : MonoBehaviour
 {
     public void Setup()
     {

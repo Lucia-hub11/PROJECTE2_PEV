@@ -1827,6 +1827,7 @@ GameObject:
   - component: {fileID: 31961240}
   - component: {fileID: 31961239}
   - component: {fileID: 31961238}
+  - component: {fileID: 31961242}
   m_Layer: 0
   m_Name: Wall with hole (1)
   m_TagString: Untagged
@@ -1920,6 +1921,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31961236}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &31961242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31961236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c847cfce50a0a9d4fabb1dd6d5e4bb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &32173481
 GameObject:
   m_ObjectHideFlags: 0
@@ -41153,6 +41166,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003982135}
   m_Mesh: {fileID: -1632188327097230679, guid: 61bf8e4dfd0f84c4ba7f8735b3bf3d8f, type: 3}
+--- !u!1 &1006984465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1006984466}
+  - component: {fileID: 1006984467}
+  m_Layer: 0
+  m_Name: DarkLightChange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1006984466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006984465}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1705434931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006984467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1006984465}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703dbe77a42908a43b79b9d81d5b0fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirLight: {fileID: 0}
+  InitialIntensity: 1.2
+  FinalIntensity: 0
 --- !u!1 &1011009137
 GameObject:
   m_ObjectHideFlags: 0
@@ -65193,6 +65253,7 @@ Transform:
   - {fileID: 1780905581}
   - {fileID: 1188211211}
   - {fileID: 596258147}
+  - {fileID: 1006984466}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1708492772
@@ -67935,6 +67996,7 @@ MonoBehaviour:
   GroundColliderLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  cameraWeaponTrack: {fileID: 0}
 --- !u!1 &1793064355
 GameObject:
   m_ObjectHideFlags: 0
@@ -68650,6 +68712,7 @@ GameObject:
   - component: {fileID: 1811271303}
   - component: {fileID: 1811271305}
   - component: {fileID: 1811271304}
+  - component: {fileID: 1811271306}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -68757,6 +68820,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1811271306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811271302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703dbe77a42908a43b79b9d81d5b0fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirLight: {fileID: 0}
+  InitialIntensity: 1.2
+  FinalIntensity: 0
 --- !u!1 &1816788905
 GameObject:
   m_ObjectHideFlags: 0
@@ -72411,6 +72489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   Player: {fileID: 0}
+  GameOverScreen: {fileID: 0}
 --- !u!136 &1934700974
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -78924,6 +79003,7 @@ GameObject:
   - component: {fileID: 2117874963}
   - component: {fileID: 2117874962}
   - component: {fileID: 2117874961}
+  - component: {fileID: 2117874965}
   m_Layer: 0
   m_Name: Wall with hole (2)
   m_TagString: Untagged
@@ -79017,6 +79097,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117874959}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2117874965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117874959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c847cfce50a0a9d4fabb1dd6d5e4bb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2117978978
 GameObject:
   m_ObjectHideFlags: 0
