@@ -14,12 +14,11 @@ public class EnemyDestruction : MonoBehaviour
     private DarkerLight darkerLight;
     private BrokeLantern lantern;
 
-    //audio
     public static Action OnParty;
 
     private bool playerIsHere;
 
-    public bool IsPlayerHere() //bool per els Behaviours del enemy conills
+    public bool IsPlayerHere()
     {
         return playerIsHere;
     }
@@ -39,18 +38,13 @@ public class EnemyDestruction : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        //if (screenEffect != null)
-        //{
-        //    screenEffect.OnObjectDestroyed();
-        //    waterBlood.OnObjectDestroyed();
-        //}
         if(gameObject.tag == "Enemy")
         {
             if (collision.tag == "Bullet")
             {
                 GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
 
-                darkerLight?.OnObjectDestroyed(); //
+                darkerLight?.OnObjectDestroyed();
 
                 Destroy(gameObject);
                 Destroy(ExplosionSystem, 1f);
@@ -110,19 +104,11 @@ public class EnemyDestruction : MonoBehaviour
 
     void OnDestroy()
     {
-        //SHADER PRIMERA VERSI�
-        //if (screenEffect != null)
-        //{
-        //    screenEffect.OnObjectDestroyed();
-        //}
-
         waterBlood.OnObjectDestroyed();
 
         angrierBunnies.OnObjectDestroyed();
 
         basement.OnObjectDestroyed();
-
-        //darkerLight.OnObjectDestroyed();
 
         if (basement != null)
         {
