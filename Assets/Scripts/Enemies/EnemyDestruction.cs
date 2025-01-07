@@ -14,12 +14,11 @@ public class EnemyDestruction : MonoBehaviour
     private DarkerLight darkerLight;
     private BrokeLantern lantern;
 
-    //audio
     public static Action OnParty;
 
     private bool playerIsHere;
 
-    public bool IsPlayerHere() //bool per els Behaviours del enemy conills
+    public bool IsPlayerHere()
     {
         return playerIsHere;
     }
@@ -39,11 +38,6 @@ public class EnemyDestruction : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        //if (screenEffect != null)
-        //{
-        //    screenEffect.OnObjectDestroyed();
-        //    waterBlood.OnObjectDestroyed();
-        //}
         if(gameObject.tag == "Enemy")
         {
             if (collision.tag == "Bullet")
@@ -66,7 +60,6 @@ public class EnemyDestruction : MonoBehaviour
                 if (screenEffect != null)
                 {
                     screenEffect.OnDamageTaken();
-                    Debug.Log("TIENE EL SCREEN EFFECT");
                 }
                 playerIsHere = true;
             }
@@ -75,11 +68,9 @@ public class EnemyDestruction : MonoBehaviour
         {
             if (collision.tag == "Bullet")
             {
-                Debug.Log("BALA TOCA");
                 var bossHealth = gameObject.GetComponent<BOSS>();
                 if (bossHealth != null)
                 {
-                    Debug.Log("TIENE SALUD");
                     bossHealth.TakeDamage(1);
                 }
             }
@@ -93,7 +84,6 @@ public class EnemyDestruction : MonoBehaviour
                 if (screenEffect != null)
                 {
                     screenEffect.OnDamageTaken();
-                    Debug.Log("TIENE EL SCREEN EFFECT");
                 }
                 playerIsHere = true;
             }
@@ -107,15 +97,8 @@ public class EnemyDestruction : MonoBehaviour
         }
     }
 
-
     void OnDestroy()
     {
-        //SHADER PRIMERA VERSI�
-        //if (screenEffect != null)
-        //{
-        //    screenEffect.OnObjectDestroyed();
-        //}
-
         waterBlood.OnObjectDestroyed();
 
         angrierBunnies.OnObjectDestroyed();
@@ -124,7 +107,4 @@ public class EnemyDestruction : MonoBehaviour
 
         lantern.OnObjectDestroyed();
     }
-
-    
-
 }
