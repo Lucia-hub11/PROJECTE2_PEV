@@ -27,7 +27,6 @@ public class Controller : MonoBehaviour
     public GameObject nearItem;
     public GameObject itemPrefab;
     public Transform itemSlot;
-    public GameObject crosshair;  //Mirilla
 
     void Start()
     {
@@ -42,7 +41,7 @@ public class Controller : MonoBehaviour
 
     void Update()
     {
-        ItemLogic();
+        
 
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
@@ -84,26 +83,5 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void ItemLogic()
-    {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer==LayerMask.NameToLayer("Item"))
-        {
-            Debug.Log("Hi ha un objecte aprop!");
-            nearItem = other.gameObject;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Item"))
-        {
-            Debug.Log("Ja no hi ha items aprop...");
-            nearItem = null;
-        }
-    }
+    
 }
