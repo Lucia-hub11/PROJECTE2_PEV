@@ -1639,7 +1639,7 @@ Transform:
   m_GameObject: {fileID: 144178171}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49998748, y: -0.52578664, z: -0.5058461, w: -0.46656278}
-  m_LocalPosition: {x: 5.092, y: 0.074, z: -3.161}
+  m_LocalPosition: {x: 4.62, y: 0.04, z: -3.14}
   m_LocalScale: {x: 0.22999994, y: 0.22999999, z: 0.22999994}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1692,7 +1692,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &144931756
 GameObject:
@@ -9366,6 +9366,7 @@ MonoBehaviour:
   GroundColliderLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  cameraWeaponTrack: {fileID: 0}
 --- !u!1 &763701428
 GameObject:
   m_ObjectHideFlags: 0
@@ -23065,6 +23066,7 @@ MonoBehaviour:
   GroundColliderLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  cameraWeaponTrack: {fileID: 0}
 --- !u!1 &1810417364
 GameObject:
   m_ObjectHideFlags: 0

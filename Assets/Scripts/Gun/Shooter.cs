@@ -14,6 +14,8 @@ public class Shooter : MonoBehaviour
     public LayerMask GroundColliderLayerMask;
     public static Action OnBullet;
 
+    public Transform cameraWeaponTrack;
+
     void Start()
     {
         _inputs = GetComponent<InputControllers>();
