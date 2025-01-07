@@ -67,6 +67,10 @@ public class EnemyDestruction : MonoBehaviour
                 {
                     healthComponent.TakeDamage(10);
                 }
+                if (screenEffect != null)
+                {
+                    screenEffect.OnDamageTaken();
+                }
             }
         }
     }
@@ -74,10 +78,11 @@ public class EnemyDestruction : MonoBehaviour
 
     void OnDestroy()
     {
-        if (screenEffect != null)
-        {
-            screenEffect.OnObjectDestroyed();
-        }
+        //SHADER PRIMERA VERSIÓ
+        //if (screenEffect != null)
+        //{
+        //    screenEffect.OnObjectDestroyed();
+        //}
 
         if (waterBlood != null)
         {

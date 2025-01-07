@@ -5,14 +5,13 @@ using UnityEngine;
 public class ScreenEffect : MonoBehaviour
 {
     public Material ScreenEffectMaterial;
-    private float EnemyDown = 0f;
-    private Color StartColor = new Color(1f, 1f, 1f);
-    private Color EndColor = new Color(0.5f, 0f, 0f);
 
-    public void OnObjectDestroyed()
+    private Color StartColor = new Color(1f, 1f, 1f);
+    private Color EndColor = new Color(0.7f, 0f, 0f);
+
+    public void OnDamageTaken()
     {
-        EnemyDown = Mathf.Min(EnemyDown + 0.05f, 1f);
-        Color CurrentColor = Color.Lerp(StartColor, EndColor, EnemyDown);
+        Color CurrentColor = Color.Lerp(StartColor, EndColor);
         ScreenEffectMaterial.SetColor("ScreenColor", CurrentColor);
     }
 
@@ -25,4 +24,31 @@ public class ScreenEffect : MonoBehaviour
     {
         ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
     }
+
+
+
+
+
+    // SCRIPT PRIMERA VERSIÓ (ambient cada cop més vermell a mesura que es maten conills)
+
+    //private float EnemyDown = 0f;
+    //private Color StartColor = new Color(1f, 1f, 1f);
+    //private Color EndColor = new Color(0.5f, 0f, 0f);
+
+    //public void OnObjectDestroyed()
+    //{
+    //    EnemyDown = Mathf.Min(EnemyDown + 0.05f, 1f);
+    //    Color CurrentColor = Color.Lerp(StartColor, EndColor, EnemyDown);
+    //    ScreenEffectMaterial.SetColor("ScreenColor", CurrentColor);
+    //}
+
+    //void OnDisable()
+    //{
+    //    ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
+    //}
+
+    //void OnApplicationQuit()
+    //{
+    //    ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
+    //}
 }
