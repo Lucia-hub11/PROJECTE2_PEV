@@ -61,9 +61,9 @@ public class ScreenEffect : MonoBehaviour
     //    public Material ScreenEffectMaterial;
 
     //    private Color StartColor = new Color(0f, 0f, 0f);
-    //    private Color EndColor = new Color(0.7f, 0f, 0f);
+    //    private Color EndColor = new Color(0.3f, 1f, 1f);
 
-    //    private float effectDuration = 0.5f; // Duración del efecto (en segundos)
+    //    private float effectDuration = 0.8f; // Duración del efecto (en segundos)
     //    private float effectTimer = 0f; // Temporizador para la duración del efecto
     //    private bool isEffectActive = false; // Bandera para saber si el efecto está activo
 
@@ -112,26 +112,26 @@ public class ScreenEffect : MonoBehaviour
 
 
 
-    //    // SCRIPT PRIMERA VERSIÓ (ambient cada cop més vermell a mesura que es maten conills)
+        //SCRIPT PRIMERA VERSIÓ (ambient cada cop més vermell a mesura que es maten conills)
 
-    //    //private float EnemyDown = 0f;
-    //    //private Color StartColor = new Color(1f, 1f, 1f);
-    //    //private Color EndColor = new Color(0.5f, 0f, 0f);
+        //private float EnemyDown = 0f;
+        //    private Color StartColor = new Color(1f, 1f, 1f);
+        //    private Color EndColor = new Color(0.5f, 0f, 0f);
 
-    //    //public void OnObjectDestroyed()
-    //    //{
-    //    //    EnemyDown = Mathf.Min(EnemyDown + 0.05f, 1f);
-    //    //    Color CurrentColor = Color.Lerp(StartColor, EndColor, EnemyDown);
-    //    //    ScreenEffectMaterial.SetColor("ScreenColor", CurrentColor);
-    //    //}
+        //    public void OnObjectDestroyed()
+        //    {
+        //        EnemyDown = Mathf.Min(EnemyDown + 0.05f, 1f);
+        //        Color CurrentColor = Color.Lerp(StartColor, EndColor, EnemyDown);
+        //        ScreenEffectMaterial.SetColor("ScreenColor", CurrentColor);
+        //    }
 
-    //    //void OnDisable()
-    //    //{
-    //    //    ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
-    //    //}
+        //    void OnDisable()
+        //    {
+        //        ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
+        //    }
 
-    //    //void OnApplicationQuit()
-    //    //{
-    //    //    ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
-    //    //}
-//}
+        //    void OnApplicationQuit()
+        //    {
+        //        ScreenEffectMaterial.SetColor("ScreenColor", StartColor);
+        //    }
+    //}
