@@ -39,5 +39,5 @@ Material:
     m_Floats:
     - _VignetteIntensity: 1
     m_Colors:
-    - ScreenColor: {r: 0.42452827, g: 0, b: 0, a: 1}
+    - ScreenColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
