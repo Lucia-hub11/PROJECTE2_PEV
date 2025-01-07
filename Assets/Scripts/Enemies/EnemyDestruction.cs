@@ -122,13 +122,6 @@ public class EnemyDestruction : MonoBehaviour
 
         basement.OnObjectDestroyed();
 
-        //darkerLight.OnObjectDestroyed();
-
-        if (basement != null)
-        {
-            basement.OnObjectDestroyed();
-        }
-
         lantern.OnObjectDestroyed();
     }
 

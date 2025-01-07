@@ -24,7 +24,7 @@ public class AppleScript : MonoBehaviour
             var healthComponent = collision.GetComponent<PlayerHealth>();
             if (healthComponent != null)
             {
-                healthComponent.TakeHealth(20);
+                healthComponent.TakeHealth(2);
                 Debug.Log("healthy");
             }
 
