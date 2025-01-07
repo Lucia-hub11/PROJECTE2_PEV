@@ -20,12 +20,10 @@ public class AppleScript : MonoBehaviour
         }
         if (collision.tag == "Player")
         {
-            Debug.Log("ÑAM");
             var healthComponent = collision.GetComponent<PlayerHealth>();
             if (healthComponent != null)
             {
                 healthComponent.TakeHealth(20);
-                Debug.Log("healthy");
             }
 
             Destroy(gameObject);
