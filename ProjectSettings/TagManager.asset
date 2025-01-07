@@ -10,6 +10,7 @@ TagManager:
   - Boss
   - Apple
   - BOX VOLUME
+  - PictureCollider
   layers:
   - Default
   - TransparentFX
