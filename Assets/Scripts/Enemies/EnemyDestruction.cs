@@ -9,6 +9,7 @@ public class EnemyDestruction : MonoBehaviour
     public GameObject Explosion;
     private ScreenEffect screenEffect;
     private WaterBlood waterBlood;
+    private Basement basement;
 
     //audio
     public static Action OnParty;
@@ -19,6 +20,7 @@ public class EnemyDestruction : MonoBehaviour
         _rg = GetComponent<Rigidbody>();
         screenEffect = FindObjectOfType<ScreenEffect>();
         waterBlood = FindObjectOfType<WaterBlood>();
+        basement = FindObjectOfType<Basement>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -80,6 +82,10 @@ public class EnemyDestruction : MonoBehaviour
         if (waterBlood != null)
         {
             waterBlood.OnObjectDestroyed();
+        }
+        if (basement != null)
+        {
+            basement.OnObjectDestroyed();
         }
     }
 
