@@ -10,8 +10,9 @@ public class EnemyDestruction : MonoBehaviour
     private ScreenEffect screenEffect;
     private WaterBlood waterBlood;
 
+    //audio
     public static Action OnParty;
-    
+
 
     void Start()
     {
@@ -20,20 +21,54 @@ public class EnemyDestruction : MonoBehaviour
         waterBlood = FindObjectOfType<WaterBlood>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider collision)
     {
-        GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
-        if (screenEffect != null)
+        //if (screenEffect != null)
+        //{
+        //    screenEffect.OnObjectDestroyed();
+        //    waterBlood.OnObjectDestroyed();
+        //}
+        if(gameObject.tag == "Enemy")
         {
-            screenEffect.OnObjectDestroyed();
-            waterBlood.OnObjectDestroyed();
+            if (collision.tag == "Bullet")
+            {
+                GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+                Destroy(ExplosionSystem, 1f);
+                OnParty?.Invoke();
+            }
+            if (collision.tag == "Player")
+            {
+                var healthComponent = collision.GetComponent<PlayerHealth>();
+                if (healthComponent != null)
+                {
+                    healthComponent.TakeDamage(1);
+                }
+            }
         }
-        Destroy(gameObject);
-        Destroy(ExplosionSystem, 1f);
-        OnParty?.Invoke();
-        
-
+        if (gameObject.tag == "Boss")
+        {
+            if (collision.tag == "Bullet")
+            {
+                Debug.Log("BALA TOCA");
+                var bossHealth = gameObject.GetComponent<BOSS>();
+                if (bossHealth != null)
+                {
+                    Debug.Log("TIENE SALUD");
+                    bossHealth.TakeDamage(1);
+                }
+            }
+            if (collision.tag == "Player")
+            {
+                var healthComponent = collision.GetComponent<PlayerHealth>();
+                if (healthComponent != null)
+                {
+                    healthComponent.TakeDamage(10);
+                }
+            }
+        }
     }
+        
 
     void OnDestroy()
     {

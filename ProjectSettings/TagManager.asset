@@ -6,6 +6,10 @@ TagManager:
   tags:
   - KeyDoorCollider
   - Bullet
+  - Enemy
+  - Boss
+  - Apple
+  - BOX VOLUME
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - UI
   - Player
   - Ground
-  - 
+  - Box Volume
   - 
   - 
   - 
