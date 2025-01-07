@@ -238,7 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4520131}
-  - component: {fileID: 4520130}
+  - component: {fileID: 4520132}
   m_Layer: 0
   m_Name: ScreenEffect
   m_TagString: Untagged
@@ -246,19 +246,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4520130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4520129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62f40f63d1fc5a4193b70f1f09665da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScreenEffectMaterial: {fileID: 2100000, guid: 1c93772e66d5e26409d0132143c4b780, type: 2}
 --- !u!4 &4520131
 Transform:
   m_ObjectHideFlags: 0
@@ -274,6 +261,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4520132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62f40f63d1fc5a4193b70f1f09665da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScreenEffectMaterial: {fileID: 2100000, guid: 1c93772e66d5e26409d0132143c4b780, type: 2}
 --- !u!1 &20017577
 GameObject:
   m_ObjectHideFlags: 0
@@ -7491,6 +7491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorCollider: {fileID: 1787729131}
+  paintingCollider: {fileID: 0}
 --- !u!65 &549631107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26427,6 +26428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194228}
   keyDoorAnimator: {fileID: 538161676}
+  paintingAnimator: {fileID: 0}
   WalkSpeed: 5
   JumpSpeed: 6.5
   AirControl: 0.1
@@ -26606,6 +26608,11 @@ MonoBehaviour:
   y: 0
   fuerzaSalto: 0
   fuerzaExtra: 0
+  hasPistol: 0
+  nearItem: {fileID: 0}
+  itemPrefab: {fileID: 0}
+  itemSlot: {fileID: 0}
+  crosshair: {fileID: 0}
 --- !u!1001 &1997294735
 PrefabInstance:
   m_ObjectHideFlags: 0
