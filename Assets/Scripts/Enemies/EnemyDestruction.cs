@@ -13,6 +13,13 @@ public class EnemyDestruction : MonoBehaviour
     //audio
     public static Action OnParty;
 
+    private bool playerIsHere;
+
+    public bool IsPlayerHere() //bool per els Behaviours del enemy conills
+    {
+        return playerIsHere;
+    }
+
 
     void Start()
     {
@@ -44,6 +51,7 @@ public class EnemyDestruction : MonoBehaviour
                 {
                     healthComponent.TakeDamage(1);
                 }
+                playerIsHere = true;
             }
         }
         if (gameObject.tag == "Boss")
@@ -68,7 +76,14 @@ public class EnemyDestruction : MonoBehaviour
             }
         }
     }
-        
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerIsHere = false;
+        }
+    }
+
 
     void OnDestroy()
     {
@@ -82,5 +97,7 @@ public class EnemyDestruction : MonoBehaviour
             waterBlood.OnObjectDestroyed();
         }
     }
+
+    
 
 }
