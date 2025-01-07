@@ -11,6 +11,7 @@ public class EnemyDestruction : MonoBehaviour
     private WaterBlood waterBlood;
     private AngrierBunnies angrierBunnies;
     private Basement basement;
+    private DarkerLight darkerLight;
     private BrokeLantern lantern;
 
     //audio
@@ -31,6 +32,8 @@ public class EnemyDestruction : MonoBehaviour
         waterBlood = FindObjectOfType<WaterBlood>();
         angrierBunnies = FindObjectOfType<AngrierBunnies>();
         basement = FindObjectOfType<Basement>();
+        darkerLight = FindObjectOfType<DarkerLight>();
+
         lantern = FindObjectOfType<BrokeLantern>();
     }
 
@@ -46,6 +49,9 @@ public class EnemyDestruction : MonoBehaviour
             if (collision.tag == "Bullet")
             {
                 GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
+
+                darkerLight?.OnObjectDestroyed(); //
+
                 Destroy(gameObject);
                 Destroy(ExplosionSystem, 1f);
                 OnParty?.Invoke();
@@ -104,12 +110,14 @@ public class EnemyDestruction : MonoBehaviour
         //    screenEffect.OnObjectDestroyed();
         //}
 
-        if (waterBlood != null)
-        {
-            waterBlood.OnObjectDestroyed();
-        }
+        waterBlood.OnObjectDestroyed();
 
         angrierBunnies.OnObjectDestroyed();
+
+        basement.OnObjectDestroyed();
+
+        //darkerLight.OnObjectDestroyed();
+
         if (basement != null)
         {
             basement.OnObjectDestroyed();
