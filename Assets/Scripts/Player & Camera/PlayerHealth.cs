@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 200;
     private float currentHealth;
     public GameObject Player;
+    public GameOverScreen GameOverScreen;
 
     public static Action<float> OnDamage;
     public static Action<float> OnApple;
@@ -28,8 +29,9 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             //muerte
-            //Destroy(Player);
+            Destroy(Player);
             Debug.Log("MUERTA");
+            GameOverScreen.Setup();
         }
     }
 

@@ -9,6 +9,7 @@ public class EnemyDestruction : MonoBehaviour
     public GameObject Explosion;
     private ScreenEffect screenEffect;
     private WaterBlood waterBlood;
+    private Basement basement;
 
     //audio
     public static Action OnParty;
@@ -26,6 +27,7 @@ public class EnemyDestruction : MonoBehaviour
         _rg = GetComponent<Rigidbody>();
         screenEffect = FindObjectOfType<ScreenEffect>();
         waterBlood = FindObjectOfType<WaterBlood>();
+        basement = FindObjectOfType<Basement>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -73,6 +75,10 @@ public class EnemyDestruction : MonoBehaviour
                 {
                     healthComponent.TakeDamage(10);
                 }
+                if (screenEffect != null)
+                {
+                    screenEffect.OnDamageTaken();
+                }
                 playerIsHere = true;
             }
         }
@@ -88,14 +94,19 @@ public class EnemyDestruction : MonoBehaviour
 
     void OnDestroy()
     {
-        if (screenEffect != null)
-        {
-            screenEffect.OnObjectDestroyed();
-        }
+        //SHADER PRIMERA VERSI�
+        //if (screenEffect != null)
+        //{
+        //    screenEffect.OnObjectDestroyed();
+        //}
 
         if (waterBlood != null)
         {
             waterBlood.OnObjectDestroyed();
+        }
+        if (basement != null)
+        {
+            basement.OnObjectDestroyed();
         }
     }
 

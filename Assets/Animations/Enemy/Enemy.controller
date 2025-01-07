@@ -24,8 +24,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818a349d7c1626a468b91a874947a463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backSpeed: 2
-  backDistance: 3
+  backSpeed: 5
+  backDistance: 0.5
 --- !u!1102 &-6876446516716003334
 AnimatorState:
   serializedVersion: 6
