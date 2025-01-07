@@ -60297,7 +60297,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1499654000}
-  - component: {fileID: 1499654001}
   m_Layer: 0
   m_Name: Plant1 (2)
   m_TagString: Untagged
@@ -60325,27 +60324,6 @@ Transform:
   - {fileID: 1655491786}
   m_Father: {fileID: 1861306966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1499654001
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499653999}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1502863403
 GameObject:
   m_ObjectHideFlags: 0
@@ -63447,6 +63425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596827433}
   - component: {fileID: 1596827434}
+  - component: {fileID: 1596827435}
   m_Layer: 0
   m_Name: BasementDoorPivot
   m_TagString: Untagged
@@ -63491,6 +63470,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1596827435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596827432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 608ca2e3c6e517a42805e78ccce88d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DoorRange: 3
+  WayPoint: {fileID: 489976274}
+  Offset: {x: -8, y: 0, z: -1}
+  TrapdoorAnimator: {fileID: 1596827434}
 --- !u!1 &1599578562
 GameObject:
   m_ObjectHideFlags: 0
@@ -69316,7 +69311,7 @@ GameObject:
   - component: {fileID: 1793064356}
   - component: {fileID: 1793064358}
   - component: {fileID: 1793064357}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: ClosetBig.001 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
