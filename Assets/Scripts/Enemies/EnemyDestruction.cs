@@ -11,6 +11,7 @@ public class EnemyDestruction : MonoBehaviour
     private WaterBlood waterBlood;
     private AngrierBunnies angrierBunnies;
     private Basement basement;
+    private BrokeLantern lantern;
 
     //audio
     public static Action OnParty;
@@ -30,6 +31,7 @@ public class EnemyDestruction : MonoBehaviour
         waterBlood = FindObjectOfType<WaterBlood>();
         angrierBunnies = FindObjectOfType<AngrierBunnies>();
         basement = FindObjectOfType<Basement>();
+        lantern = FindObjectOfType<BrokeLantern>();
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -112,6 +114,8 @@ public class EnemyDestruction : MonoBehaviour
         {
             basement.OnObjectDestroyed();
         }
+
+        lantern.OnObjectDestroyed();
     }
 
     

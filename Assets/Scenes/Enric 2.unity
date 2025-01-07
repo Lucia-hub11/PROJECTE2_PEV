@@ -18315,9 +18315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713f87e4918914e02ac9ef443bff6a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LanternRange: 4
+  LanternRange: 10
   WayPoint: {fileID: 489976274}
-  Offset: {x: 0, y: 0, z: 0}
+  Offset: {x: 10, y: 0, z: 5}
   LanternAnimator: {fileID: 482293509}
 --- !u!1 &484173447
 GameObject:

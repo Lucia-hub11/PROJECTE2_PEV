@@ -11,12 +11,6 @@ public class BrokeLantern : MonoBehaviour
     public Animator LanternAnimator;
     bool broke_lantern;
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position + Offset, LanternRange);
-    }
-
     void Start()
     {
         broke_lantern = false;
