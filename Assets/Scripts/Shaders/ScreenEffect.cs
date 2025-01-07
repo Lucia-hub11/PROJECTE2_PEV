@@ -11,8 +11,8 @@ public class ScreenEffect : MonoBehaviour
 
     public void OnDamageTaken()
     {
-        Color CurrentColor = Color.Lerp(StartColor, EndColor);
-        ScreenEffectMaterial.SetColor("ScreenColor", CurrentColor);
+        //Color CurrentColor = Color.Lerp(StartColor, EndColor);
+        //ScreenEffectMaterial.SetColor("ScreenColor", CurrentColor);
     }
 
     void OnDisable()
