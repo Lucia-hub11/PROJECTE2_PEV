@@ -88,7 +88,7 @@ public class EnemyDestruction : MonoBehaviour
                 var healthComponent = collision.GetComponent<PlayerHealth>();
                 if (healthComponent != null)
                 {
-                    healthComponent.TakeDamage(10);
+                    healthComponent.TakeDamage(5);
                 }
                 if (screenEffect != null)
                 {
