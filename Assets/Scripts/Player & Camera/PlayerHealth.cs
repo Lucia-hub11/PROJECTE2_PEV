@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             //muerte
-            //Destroy(Player);
+            Destroy(Player);
             Debug.Log("MUERTA");
             GameOverScreen.Setup();
         }
