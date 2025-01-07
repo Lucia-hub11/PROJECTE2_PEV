@@ -53,6 +53,11 @@ public class EnemyDestruction : MonoBehaviour
                 {
                     healthComponent.TakeDamage(1);
                 }
+                if (screenEffect != null)
+                {
+                    screenEffect.OnDamageTaken();
+                    Debug.Log("TIENE EL SCREEN EFFECT");
+                }
                 playerIsHere = true;
             }
         }
@@ -78,6 +83,7 @@ public class EnemyDestruction : MonoBehaviour
                 if (screenEffect != null)
                 {
                     screenEffect.OnDamageTaken();
+                    Debug.Log("TIENE EL SCREEN EFFECT");
                 }
                 playerIsHere = true;
             }
