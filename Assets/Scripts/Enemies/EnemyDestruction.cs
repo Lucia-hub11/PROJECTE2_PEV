@@ -47,6 +47,9 @@ public class EnemyDestruction : MonoBehaviour
             if (collision.tag == "Bullet")
             {
                 GameObject ExplosionSystem = Instantiate(Explosion, transform.position, Quaternion.identity);
+
+                darkerLight?.OnObjectDestroyed(); //
+
                 Destroy(gameObject);
                 Destroy(ExplosionSystem, 1f);
                 OnParty?.Invoke();
@@ -111,7 +114,7 @@ public class EnemyDestruction : MonoBehaviour
 
         basement.OnObjectDestroyed();
 
-        darkerLight.OnObjectDestroyed();
+        //darkerLight.OnObjectDestroyed();
 
     }
 

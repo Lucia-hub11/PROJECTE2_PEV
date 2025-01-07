@@ -1933,19 +1933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c847cfce50a0a9d4fabb1dd6d5e4bb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiesDestroyed: 0
-  MaxEnemies: 8
-  WallsMaterial: {fileID: 0}
-  InicialWallsMaterial:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  TargetWallsMaterial:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
 --- !u!1 &32173481
 GameObject:
   m_ObjectHideFlags: 0
@@ -41223,7 +41210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703dbe77a42908a43b79b9d81d5b0fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DirLight: {fileID: 1811271305}
+  DirLight: {fileID: 0}
   InitialIntensity: 1.2
   FinalIntensity: 0
 --- !u!1 &1011009137
@@ -68845,7 +68832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703dbe77a42908a43b79b9d81d5b0fc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DirLight: {fileID: 1811271305}
+  DirLight: {fileID: 0}
   InitialIntensity: 1.2
   FinalIntensity: 0
 --- !u!1 &1816788905
@@ -79122,19 +79109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c847cfce50a0a9d4fabb1dd6d5e4bb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemiesDestroyed: 0
-  MaxEnemies: 8
-  WallsMaterial: {fileID: 0}
-  InicialWallsMaterial:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  TargetWallsMaterial:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
 --- !u!1 &2117978978
 GameObject:
   m_ObjectHideFlags: 0
