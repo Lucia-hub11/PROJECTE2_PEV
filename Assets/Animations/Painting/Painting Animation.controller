@@ -37,7 +37,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 6682954414316839272}
-    m_Position: {x: 310, y: 100, z: 0}
+    m_Position: {x: 360, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6545450038862638541}
     m_Position: {x: 510, y: 230, z: 0}
@@ -60,7 +60,7 @@ AnimatorController:
   m_Name: Painting Animation
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Player Near
+  - m_Name: Near Painting
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -88,7 +88,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Player Near
+    m_ConditionEvent: Near Painting
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6545450038862638541}
