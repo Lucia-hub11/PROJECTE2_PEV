@@ -36,7 +36,7 @@ public class Controller : MonoBehaviour
         _groundChecker = GetComponentInChildren<GroundChecker>();
 
         hasPistol = true;
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked; //per a que no es vegi el cursor a la pantalla mentre es juga
     }
 
 

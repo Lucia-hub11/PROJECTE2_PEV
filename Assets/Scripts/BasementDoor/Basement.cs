@@ -6,10 +6,21 @@ public class Basement : MonoBehaviour
 {
     public float DoorRange = 4;
     public Transform WayPoint;
+    public Vector3 Offset; // Offset para desplazar el ?rea de detecci?n
+
+    public Animator TrapdoorAnimator;
+    bool open_trapdoor;
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, DoorRange);
+        // Dibuja el ?rea desplazada
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position + Offset, DoorRange);
+    }
+
+    void Start()
+    {
+        open_trapdoor = false;
     }
 
     private int EnemiesDestroyed = 0;
@@ -17,14 +28,14 @@ public class Basement : MonoBehaviour
     {
         EnemiesDestroyed += 1;
         Debug.Log("UNO MAS UNO MENOS " + EnemiesDestroyed);
-
     }
 
     void Update()
     {
-        if (IsBasementDetected() && EnemiesDestroyed == 7)
+        if (IsBasementDetected() && EnemiesDestroyed == 8)
         {
-            Destroy(gameObject);
+            open_trapdoor = true;
+            TrapdoorAnimator.SetBool("Trapdoor", open_trapdoor);
             Debug.Log("ABRETE SESAMO ");
         }
     }
@@ -36,6 +47,6 @@ public class Basement : MonoBehaviour
 
     private bool IsInBasementRange(Transform target)
     {
-        return Vector3.Distance(transform.position, target.position) < DoorRange;
+        return Vector3.Distance(transform.position + Offset, target.position) < DoorRange;
     }
 }
