@@ -6,14 +6,13 @@ public class Basement : MonoBehaviour
 {
     public float DoorRange = 4;
     public Transform WayPoint;
-    public Vector3 Offset; // Offset para desplazar el ?rea de detecci?n
+    public Vector3 Offset;
 
     public Animator TrapdoorAnimator;
     bool open_trapdoor;
 
     private void OnDrawGizmos()
     {
-        // Dibuja el ?rea desplazada
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position + Offset, DoorRange);
     }

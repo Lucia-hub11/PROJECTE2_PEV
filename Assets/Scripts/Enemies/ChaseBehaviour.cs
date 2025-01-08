@@ -1,4 +1,3 @@
-//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +32,7 @@ public class ChaseBehaviour : StateMachineBehaviour
     private void Move(Animator animator, Transform target)
     {
         Vector3 targetPosition = target.position;
-        if (Move2D) //si es vol moure nomes en la y (no jump)
+        if (Move2D)
             targetPosition.y = animator.transform.position.y;
         animator.transform.LookAt(targetPosition);
         animator.transform.Translate(animator.transform.forward * Speed * Time.deltaTime, Space.World);
