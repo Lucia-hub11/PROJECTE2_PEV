@@ -1267,7 +1267,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 25376906}
-  m_Layer: 0
+  - component: {fileID: 25376908}
+  - component: {fileID: 25376907}
+  m_Layer: 7
   m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,6 +1301,48 @@ Transform:
   - {fileID: 1024912556}
   m_Father: {fileID: 596164021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &25376907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25376905}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 92.404335, y: 105.39352, z: 100.92597}
+  m_Center: {x: 115.97036, y: 52.19688, z: 24.976921}
+--- !u!65 &25376908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25376905}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 299.36642, y: 108.602875, z: 109.19147}
+  m_Center: {x: 23.890215, y: 53.801437, z: 119.330765}
 --- !u!1 &25796842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,7 +1963,7 @@ GameObject:
   - component: {fileID: 32173482}
   - component: {fileID: 32173484}
   - component: {fileID: 32173483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2106,7 +2150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 42885422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6412,7 +6456,7 @@ GameObject:
   - component: {fileID: 186371689}
   - component: {fileID: 186371691}
   - component: {fileID: 186371690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cold1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7656,7 +7700,7 @@ GameObject:
   - component: {fileID: 206708922}
   - component: {fileID: 206708924}
   - component: {fileID: 206708923}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9293,7 +9337,7 @@ GameObject:
   - component: {fileID: 247127601}
   - component: {fileID: 247127603}
   - component: {fileID: 247127602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10621,7 +10665,7 @@ GameObject:
   - component: {fileID: 269440315}
   - component: {fileID: 269440317}
   - component: {fileID: 269440316}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11219,7 +11263,7 @@ GameObject:
   - component: {fileID: 295759287}
   - component: {fileID: 295759289}
   - component: {fileID: 295759288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pan3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15438,7 +15482,7 @@ GameObject:
   - component: {fileID: 411547133}
   - component: {fileID: 411547135}
   - component: {fileID: 411547134}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18243,7 +18287,7 @@ GameObject:
   - component: {fileID: 471875965}
   - component: {fileID: 471875967}
   - component: {fileID: 471875966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19103,7 +19147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 497219409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28830,7 +28874,7 @@ GameObject:
   - component: {fileID: 720815394}
   - component: {fileID: 720815396}
   - component: {fileID: 720815395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28914,7 +28958,8 @@ GameObject:
   - component: {fileID: 721674072}
   - component: {fileID: 721674074}
   - component: {fileID: 721674073}
-  m_Layer: 0
+  - component: {fileID: 721674075}
+  m_Layer: 7
   m_Name: Book2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28986,6 +29031,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721674071}
   m_Mesh: {fileID: -7332076252434177530, guid: 61bf8e4dfd0f84c4ba7f8735b3bf3d8f, type: 3}
+--- !u!65 &721674075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721674071}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 25.000002, y: 30.000006, z: 10.000004}
+  m_Center: {x: -0.00009185076, y: -0.00006111501, z: 5.000001}
 --- !u!1 &727541711
 GameObject:
   m_ObjectHideFlags: 0
@@ -29281,7 +29347,7 @@ GameObject:
   - component: {fileID: 734790253}
   - component: {fileID: 734790255}
   - component: {fileID: 734790254}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pan1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40215,7 +40281,7 @@ GameObject:
   - component: {fileID: 914766100}
   - component: {fileID: 914766102}
   - component: {fileID: 914766101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stove_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42752,7 +42818,7 @@ GameObject:
   - component: {fileID: 972763713}
   - component: {fileID: 972763715}
   - component: {fileID: 972763714}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43826,7 +43892,8 @@ GameObject:
   - component: {fileID: 1003982136}
   - component: {fileID: 1003982138}
   - component: {fileID: 1003982137}
-  m_Layer: 0
+  - component: {fileID: 1003982139}
+  m_Layer: 7
   m_Name: Book1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43898,6 +43965,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003982135}
   m_Mesh: {fileID: -1632188327097230679, guid: 61bf8e4dfd0f84c4ba7f8735b3bf3d8f, type: 3}
+--- !u!65 &1003982139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003982135}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 24.999998, y: 30.000002, z: 9.999999}
+  m_Center: {x: -0.000030517578, y: 0, z: 5.000007}
 --- !u!1 &1011009137
 GameObject:
   m_ObjectHideFlags: 0
@@ -44405,7 +44493,7 @@ GameObject:
   - component: {fileID: 1023408532}
   - component: {fileID: 1023408534}
   - component: {fileID: 1023408533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stove_Top1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44571,7 +44659,7 @@ GameObject:
   - component: {fileID: 1024912556}
   - component: {fileID: 1024912558}
   - component: {fileID: 1024912557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51436,7 +51524,7 @@ GameObject:
   - component: {fileID: 1188980024}
   - component: {fileID: 1188980026}
   - component: {fileID: 1188980025}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51898,7 +51986,8 @@ GameObject:
   - component: {fileID: 1197493880}
   - component: {fileID: 1197493882}
   - component: {fileID: 1197493881}
-  m_Layer: 0
+  - component: {fileID: 1197493883}
+  m_Layer: 7
   m_Name: bush.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51970,6 +52059,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197493879}
   m_Mesh: {fileID: -6174815730686928574, guid: a34246465bf419e4fb61dd9f0c906263, type: 3}
+--- !u!135 &1197493883
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197493879}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.07935282
+  m_Center: {x: 0.006516151, y: 0.03153699, z: -0.012147782}
 --- !u!1 &1200711652
 GameObject:
   m_ObjectHideFlags: 0
@@ -53231,7 +53341,7 @@ GameObject:
   - component: {fileID: 1223394696}
   - component: {fileID: 1223394698}
   - component: {fileID: 1223394697}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53766,7 +53876,7 @@ GameObject:
   - component: {fileID: 1235070634}
   - component: {fileID: 1235070636}
   - component: {fileID: 1235070635}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Handle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57521,7 +57631,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1352141716}
-  m_Layer: 0
+  - component: {fileID: 1352141717}
+  m_Layer: 7
   m_Name: Blender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57548,6 +57659,27 @@ Transform:
   - {fileID: 972763713}
   m_Father: {fileID: 25376906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1352141717
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352141715}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24263045, y: 0.74529254, z: 0.16860366}
+  m_Center: {x: -0.0023780311, y: -0.12735264, z: -0.024513694}
 --- !u!1 &1353894322
 GameObject:
   m_ObjectHideFlags: 0
@@ -58785,7 +58917,7 @@ GameObject:
   - component: {fileID: 1389392827}
   - component: {fileID: 1389392829}
   - component: {fileID: 1389392828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62677,7 +62809,7 @@ GameObject:
   - component: {fileID: 1511878401}
   - component: {fileID: 1511878403}
   - component: {fileID: 1511878402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63605,7 +63737,7 @@ GameObject:
   - component: {fileID: 1538485500}
   - component: {fileID: 1538485502}
   - component: {fileID: 1538485501}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: pCube7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64176,7 +64308,7 @@ GameObject:
   - component: {fileID: 1560311090}
   - component: {fileID: 1560311092}
   - component: {fileID: 1560311091}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cup1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64446,7 +64578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1573834539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64906,7 +65038,7 @@ GameObject:
   - component: {fileID: 1590201659}
   - component: {fileID: 1590201661}
   - component: {fileID: 1590201660}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stove_Top2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69828,7 +69960,7 @@ GameObject:
   - component: {fileID: 1737255550}
   - component: {fileID: 1737255552}
   - component: {fileID: 1737255551}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70343,7 +70475,7 @@ GameObject:
   - component: {fileID: 1757561540}
   - component: {fileID: 1757561542}
   - component: {fileID: 1757561541}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cup2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71214,7 +71346,7 @@ GameObject:
   - component: {fileID: 1777673246}
   - component: {fileID: 1777673248}
   - component: {fileID: 1777673247}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pan2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71773,6 +71905,7 @@ GameObject:
   - component: {fileID: 1787510182}
   - component: {fileID: 1787510184}
   - component: {fileID: 1787510183}
+  - component: {fileID: 1787510185}
   m_Layer: 0
   m_Name: small pruce (3)
   m_TagString: Untagged
@@ -71845,6 +71978,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787510181}
   m_Mesh: {fileID: -7005727169886555438, guid: a34246465bf419e4fb61dd9f0c906263, type: 3}
+--- !u!65 &1787510185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787510181}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.080731176, y: 0.068906225, z: 0.15504342}
+  m_Center: {x: 0.0018565434, y: -0.005060413, z: 0.00944179}
 --- !u!1 &1790011957
 GameObject:
   m_ObjectHideFlags: 0
@@ -72596,7 +72750,7 @@ GameObject:
   - component: {fileID: 1809348443}
   - component: {fileID: 1809348445}
   - component: {fileID: 1809348444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72896,7 +73050,7 @@ GameObject:
   - component: {fileID: 1817470207}
   - component: {fileID: 1817470209}
   - component: {fileID: 1817470208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77735,7 +77889,7 @@ GameObject:
   - component: {fileID: 1979860488}
   - component: {fileID: 1979860490}
   - component: {fileID: 1979860489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thing_above_the_stove_i_dont_really_know_wat_its_called
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78501,7 +78655,7 @@ GameObject:
   - component: {fileID: 1992802838}
   - component: {fileID: 1992802840}
   - component: {fileID: 1992802839}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79522,7 +79676,7 @@ GameObject:
   - component: {fileID: 2022629792}
   - component: {fileID: 2022629794}
   - component: {fileID: 2022629793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81699,7 +81853,7 @@ GameObject:
   - component: {fileID: 2085991403}
   - component: {fileID: 2085991405}
   - component: {fileID: 2085991404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Button1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82423,7 +82577,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2105797323}
-  m_Layer: 0
+  - component: {fileID: 2105797324}
+  m_Layer: 7
   m_Name: Pan_Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82450,6 +82605,27 @@ Transform:
   - {fileID: 1538485500}
   m_Father: {fileID: 596164021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2105797324
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105797322}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 33.93967, y: 14.017421, z: 28.703663}
+  m_Center: {x: -98.66286, y: -49.978558, z: -229.02791}
 --- !u!1 &2106675727
 GameObject:
   m_ObjectHideFlags: 0
