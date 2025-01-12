@@ -15347,6 +15347,7 @@ GameObject:
   - component: {fileID: 419463667}
   - component: {fileID: 419463669}
   - component: {fileID: 419463668}
+  - component: {fileID: 419463670}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -15454,6 +15455,21 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &419463670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419463666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 703dbe77a42908a43b79b9d81d5b0fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirLight: {fileID: 419463669}
+  InitialIntensity: 1.2
+  FinalIntensity: 0
 --- !u!1 &419972202
 GameObject:
   m_ObjectHideFlags: 0
